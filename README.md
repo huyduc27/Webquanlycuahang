@@ -1,5 +1,5 @@
 # Nhóm 8386
-# Chủ đề: Web Quản lý cửa hàng
+# Chủ đề: Web Quản Lý Cửa Hàng
 Tên các thành viên:
 1. Nguyễn Đức Huy - 3123411118
 2. Hồ Hoàng Khôi - 3123411163
