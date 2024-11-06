@@ -214,7 +214,8 @@ a:hover {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  .grid__row-end{
+  /* Footer */
+    .grid__row-end{
     border-bottom: 1px solid #33333318;
     padding-bottom: 30px;
   }
