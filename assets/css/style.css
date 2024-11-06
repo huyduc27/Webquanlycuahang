@@ -4,6 +4,10 @@ body {
     margin: 0;
     padding: 0;
 }
+.header_first{
+    background-color: #EFFFF4;
+    height:43px;
+ }
 
 /* Header */
 header {
@@ -71,11 +75,15 @@ header {
 
 
 .header_search-input{
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 200px;
-    
+    width:85%;
+    height:100%;
+    border:none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    border-radius: 3px;
+    padding:0 8px;
+    outline: none;
+    align-items: center;
 }
 
 
