@@ -6,17 +6,17 @@ body {
 }
 .header_first{
     background-color: #EFFFF4;
-    height:43px;
+    height:30px;
  }
 
 /* Header */
 header {
-    background-color: red;
+    background-color: white;
     color: white;
-    padding: 10px;
-    display: flex;
+    padding:10px;
     justify-content: space-between;
     align-items: center;
+    border-color: rgb(rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0));
 }
 .header_navbar{
     align-items: center;
@@ -111,14 +111,14 @@ header {
 
 /* Navigation */
 
-.header_navbar-list{
+/* .header_navbar-list{
     list-style: none;
     margin: 0;
     padding: 15px 0;
     text-align: center;
     
 
-}
+} */
 nav ul {
     list-style: none;
     margin: 0;
@@ -132,9 +132,58 @@ nav li {
 
 nav li a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
+.header_navbar-discount{
+    background-color: white;
+    position: relative;
+    width:100%;
+    border-width: 1px 0; 
+    border-style: solid;
+    border-color: rgb(0, 0, 0);   
+    
+    
+}
+
+.header_navbar-discount-list{
+    display:flex;
+    gap:20px;
+    width:100%;
+    list-style: none;
+    font-size: 1.4rem;
+    text-align: center;
+    padding:12px 24px;
+    margin:0 78px;
+    cursor:text;
+    align-items: center;
+    
+    
+}
+
+.header_navbar-discount-item{
+    position:relative;
+}
+
+
+
+.header_navbar-dis-link{
+    color: rgb(39, 39, 42);
+    text-decoration: none;
+    margin-right: 4px;
+    cursor:text;
+}
+
+.header_navbar-dis-icon{
+    text-decoration: none;
+    color:var(--icon-dis-color);
+}
+
+
+.header_navbar-dis-link--strong{
+    color: rgb(0, 62, 161);
+    font-weight: 1.4rem;
+}
 /* Main Navigation */
 .main-nav {
     background-color: #f2f2f2;
