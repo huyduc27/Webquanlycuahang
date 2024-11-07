@@ -1,36 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
-  <link rel="stylesheet" href="assets/css/stylelogin.css">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
-  <div class="login-overlay">
-    <div class="login-container">
-      <button class="close-button" onclick="closeForm()">×</button>
-      <h2>ĐĂNG KÝ TÀI KHOẢN </h2>
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Đăng nhập</h2>
       <form id="registerForm">
         <input type="text" id="fullname" placeholder="Họ và Tên" required>
         <input type="email" id="email" placeholder="Email" required>
         <input type="address" id="address" placeholder="Địa chỉ" required>
         <input type="password" id="password" placeholder="Mật khẩu" required>
-	    	
-        <div class="checkbox">
-          <input type="checkbox" id="newsletter" checked>
-          <label for="newsletter">Đăng ký nhận tin khuyến mãi qua Email</label>
         </div>
-        <button type="submit" class="submit-button">TẠO TÀI KHOẢN</button>
+        <div class="form-group">
+          <label for="password">Mật khẩu:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Đăng nhập</button>
+        <p>Bạn chưa có tài khoản? <a href="#">Đăng ký</a></p>
       </form>
-      <div class="or">hoặc đăng ký bằng</div>
-      <div class="social-buttons">
-        <button class="google-button">Google</button>
-        <button class="facebook-button">Facebook</button>
-      </div>
-      <p class="login-link">Bạn đã có tài khoản? <a href="#">Đăng nhập!</a></p>
     </div>
   </div>
-  <script src="script.js"></script>
+
+  <script src="assets/js/login.js"></script>
 </body>
 </html>
