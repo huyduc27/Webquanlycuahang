@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>Đăng nhập</title>
-  <link rel="stylesheet" href="assets/css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
-  <div class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Đăng nhập</h2>
-      <form id="registerForm">
-        <input type="text" id="fullname" placeholder="Họ và Tên" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="address" id="address" placeholder="Địa chỉ" required>
-        <input type="password" id="password" placeholder="Mật khẩu" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Mật khẩu:</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Đăng nhập</button>
-        <p>Bạn chưa có tài khoản? <a href="#">Đăng ký</a></p>
-      </form>
-    </div>
-  </div>
 
-  <script src="assets/js/login.js"></script>
+<div class="form-container">
+    <h2>ĐĂNG NHẬP</h2>
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Mật khẩu" required>
+        
+        <button type="submit">ĐĂNG NHẬP</button>
+    </form>
+    
+    <div class="social-buttons">
+        <button class="google">Google</button>
+        <button class="facebook">Facebook</button>
+    </div>
+    
+    <div class="register-link">
+        Bạn chưa có tài khoản? <a href="#">Đăng ký!</a>
+    </div>
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="script.js"></script>
 </body>
 </html>
