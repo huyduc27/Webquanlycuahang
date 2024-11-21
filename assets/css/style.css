@@ -301,6 +301,7 @@ a:hover {
   font-weight: bold;
 } */
 .container{
+    background-color: #ddddddeb;
     padding: 20px 0;
 }
 .container__category{
@@ -325,7 +326,7 @@ a:hover {
 .category__item-link{
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     text-decoration: none;
     color: var(--text-color);
     padding: 7px 0;
@@ -492,7 +493,7 @@ a:hover {
     transform: translateY(-1.5px);
   }
   .product-item-img{
-    padding-top: 65%;
+    padding-top: 100%;
     background-size: contain;
     object-fit: contain;
     margin-top: 6px;
