@@ -11,7 +11,7 @@ body {
 
 /* Header */
 header {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: white;
     padding:10px;
     justify-content: space-between;
@@ -63,12 +63,16 @@ header {
 }
 
 .header_search-button{
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin:auto 7px;
+    width:10%;
+    height:90%;
+    border:none;
+    color:var(--icon-dis-color);
+    font-size: 1.4rem;
+    padding:0;
+    background-color:var(--white-color);
+    cursor:pointer;
+    border-left: 1px solid rgb(221, 221, 227);
     
     
 }
@@ -84,6 +88,7 @@ header {
     padding:0 8px;
     outline: none;
     align-items: center;
+    
 }
 
 
@@ -131,6 +136,7 @@ nav li {
 }
 
 nav li a {
+    font-size: 14px;
     text-decoration: none;
     color: black;
 }
@@ -609,6 +615,139 @@ a:hover {
     margin: 0 20px;
     border: none;
   }
+  /*----------------------------------------*/
+/* 	6.6 Li's Shopping Cart
+/*----------------------------------------*/
+
+.cart-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+.cart-items {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.product-img {
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h2 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.product-info p {
+    margin: 2px 0;
+    color: #666;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.quantity-control button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quantity-control button:hover {
+    background: #e64a19;
+}
+
+.quantity {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.item-total-price {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.btn-delete {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background: #d32f2f;
+}
+
+.address-section, .payment-section, .summary-section {
+    margin: 20px 0;
+}
+
+h2 {
+    color: #ff5722;
+}
+
+#checkout {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#checkout:hover {
+    background: #388e3c;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
   /* Footer */
     .grid__row-end{
     border-bottom: 1px solid #33333318;

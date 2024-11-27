@@ -1,25 +1,18 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+// Xử lý sự kiện đăng nhập
+document.getElementById("login-form").addEventListener("submit", function (e) {
+  e.preventDefault(); // Ngăn form submit lại trang
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  // Kiểm tra tên tài khoản và mật khẩu
+  if (username === "user123" && password === "123") {
+      // Lưu tên tài khoản vào localStorage
+      localStorage.setItem("loggedInUser", username);
+      // Chuyển hướng đến trang index
+      window.location.href = "index.html";
+  } else {
+      // Hiển thị thông báo lỗi
+      document.getElementById("error-message").style.display = "block";
   }
-}
+});
