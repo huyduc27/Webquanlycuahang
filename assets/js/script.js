@@ -51,3 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateTotal();
 });
+const addToCartButton = document.querySelector('.add-to-cart');
+const notification = document.querySelector('.notification');
+
+addToCartButton.addEventListener('click', () => {
+    notification.style.display = 'block';
+    // Thêm logic để ẩn thông báo sau một khoảng thời gian
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 2000);
+});
