@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateTotal();
 });
+<<<<<<< HEAD
 
 
         const products = [
@@ -123,3 +124,15 @@ document.addEventListener("DOMContentLoaded", () => {
             currentPage = 1;
             performSearch();
         });
+=======
+const addToCartButton = document.querySelector('.add-to-cart');
+const notification = document.querySelector('.notification');
+
+addToCartButton.addEventListener('click', () => {
+    notification.style.display = 'block';
+    // Thêm logic để ẩn thông báo sau một khoảng thời gian
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 2000);
+});
+>>>>>>> 9a1b8147963250f72777d41aaa40e48a87de45e1

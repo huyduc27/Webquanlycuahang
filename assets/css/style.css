@@ -1031,3 +1031,14 @@ input[type="text"] {
     margin: 0;
     box-sizing: border-box;
 }
+.notification {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 9999;
+    border-radius: 40px;
+    box-shadow: 0 40px 100px rgba(162, 13, 13, 0.974);
+}
