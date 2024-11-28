@@ -1,18 +1,19 @@
-// Xử lý sự kiện đăng nhập
-document.getElementById("login-form").addEventListener("submit", function (e) {
-  e.preventDefault(); // Ngăn form submit lại trang
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Ngăn form tự động gửi đi
 
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
+  // Lấy giá trị từ input
+  const username = document.getElementById("username").value.trim();
 
-  // Kiểm tra tên tài khoản và mật khẩu
-  if (username === "user123" && password === "123") {
-      // Lưu tên tài khoản vào localStorage
-      localStorage.setItem("loggedInUser", username);
-      // Chuyển hướng đến trang index
-      window.location.href = "index.html";
+  if (username) {
+      // Lưu tên tài khoản vào localStorage để sử dụng trên trang khác
+      localStorage.setItem("username", username);
+
+      // Hiển thị thông báo thành công (nếu cần)
+      alert("Đăng nhập thành công!");
+
+      // Chuyển hướng về trang index.html
+      window.location.href = "index1.html";
   } else {
-      // Hiển thị thông báo lỗi
-      document.getElementById("error-message").style.display = "block";
+      alert("Vui lòng nhập tên tài khoản!");
   }
 });
