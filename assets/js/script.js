@@ -51,80 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateTotal();
 });
-<<<<<<< HEAD
 
-
-        const products = [
-            { id: 1, name: 'Sản phẩm 1' },
-            { id: 2, name: 'Sản phẩm 2' },
-            { id: 3, name: 'Sản phẩm 3' },
-            { id: 4, name: 'Sản phẩm 4' },
-            { id: 5, name: 'Sản phẩm 5' },
-            { id: 6, name: 'Sản phẩm 6' },
-            { id: 7, name: 'Sản phẩm 7' },
-            { id: 8, name: 'Sản phẩm 8' },
-            { id: 9, name: 'Sản phẩm 9' },
-            { id: 10, name: 'Sản phẩm 10' },
-            { id: 11, name: 'Sản phẩm 11' },
-        ];
-
-        const itemsPerPage = 5;
-        let currentPage = 1;
-
-        const searchButton = document.getElementById('searchButton');
-        const searchInput = document.getElementById('searchInput');
-        const resultsContainer = document.getElementById('results');
-        const paginationContainer = document.getElementById('pagination');
-
-        function renderResults(filteredProducts) {
-            resultsContainer.innerHTML = '';
-            const startIndex = (currentPage - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
-
-            if (paginatedProducts.length === 0) {
-                resultsContainer.innerHTML = '<p>Không tìm thấy sản phẩm nào.</p>';
-            } else {
-                paginatedProducts.forEach(product => {
-                    const productDiv = document.createElement('div');
-                    productDiv.className = 'product';
-                    productDiv.textContent = product.name;
-                    resultsContainer.appendChild(productDiv);
-                });
-            }
-        }
-
-        function renderPagination(totalItems) {
-            paginationContainer.innerHTML = '';
-            const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-            for (let i = 1; i <= totalPages; i++) {
-                const button = document.createElement('button');
-                button.textContent = i;
-                button.disabled = i === currentPage;
-                button.className = i === currentPage ? 'disabled' : '';
-                button.addEventListener('click', () => {
-                    currentPage = i;
-                    performSearch();
-                });
-                paginationContainer.appendChild(button);
-            }
-        }
-
-        function performSearch() {
-            const query = searchInput.value.trim().toLowerCase();
-            const filteredProducts = products.filter(product =>
-                product.name.toLowerCase().includes(query)
-            );
-            renderResults(filteredProducts);
-            renderPagination(filteredProducts.length);
-        }
-
-        searchButton.addEventListener('click', () => {
-            currentPage = 1;
-            performSearch();
-        });
-=======
 const addToCartButton = document.querySelector('.add-to-cart');
 const notification = document.querySelector('.notification');
 
@@ -135,4 +62,46 @@ addToCartButton.addEventListener('click', () => {
         notification.style.display = 'none';
     }, 2000);
 });
->>>>>>> 9a1b8147963250f72777d41aaa40e48a87de45e1
+
+
+
+document.getElementById("loginForm").addEventListener("submit", function (event) {   
+    event.preventDefault(); // Ngăn form tự động gửi đi    
+  
+    // Lấy giá trị từ input   
+    const username = document.getElementById("username").value.trim();    
+  
+    if (username) {       
+        // Kiểm tra nếu là tài khoản admin       
+        if (username === "admin") {           
+            // Lưu thông tin đăng nhập vào localStorage           
+            localStorage.setItem("username", username);           
+            // Hiển thị thông báo thành công           
+            alert("Đăng nhập thành công với tài khoản Admin!");           
+            // Chuyển hướng về trang quản trị admin.html           
+            window.location.href = "admin/admin.html";       
+        } else {           
+            // Lưu thông tin đăng nhập tài khoản thường           
+            localStorage.setItem("username", username);           
+            // Hiển thị thông báo thành công           
+            alert("Đăng nhập thành công!");           
+            // Chuyển hướng về trang index.html           
+            window.location.href = "indexlogin.html";       
+        }   
+    } else {       
+        alert("Vui lòng nhập tên tài khoản!");   
+    } 
+  });
+  
+document.getElementById("cartLink").addEventListener("click", function (event) {
+    const username = localStorage.getItem("username"); // Lấy thông tin đăng nhập từ localStorage
+  
+    if (!username) {
+      // Nếu chưa đăng nhập, ngăn truy cập và yêu cầu đăng nhập
+      event.preventDefault();
+      alert("Vui lòng đăng nhập trước khi vào Giỏ hàng!");
+      window.location.href = "login.html"; // Chuyển đến trang đăng nhập
+    } else {
+      alert(`Chào mừng ${username}, bạn có thể truy cập Giỏ hàng!`);
+    }
+  });

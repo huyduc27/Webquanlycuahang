@@ -28,18 +28,41 @@
                     </div>
                         
                         
-                        <div class="header_search">
+                        <!-- <div class="header_search">
                                 <i class="header_search-icon fa-solid fa-magnifying-glass "></i>
-                                <input type="text" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm ">
-                                <button type="button" class="header_search-button"> Tìm kiếm </button> 
+                                <input type="text" id="searchInput" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm "
+                                oninput="searchProducts()">
+                                
+                                <button type="button" class="header_search-button" > Tìm kiếm </button> 
+                              
+                                <button class="filter-btn"><i class="fa-light fa-filter-list"></i><span>Lọc</span></button>
+                        </div> -->
+                        <div class="header_search">
+                            <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                class="header_search-input" 
+                                placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                            >
+                            
+                            <button 
+                                type="button" 
+                                class="header_search-button" 
+                                onclick="handleSearch()"
+                            >
+                                Tìm kiếm
+                            </button>
+                            
+ 
                         </div>
+                        
                         <nav>
                             <ul>
                                 <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
                                 <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
                                 <li><a href="#">Tra cứu đơn hàng</a></li>
-                                <li><span><i class="fa-solid fa-user"></i> Xin chào, [Tên Tài Khoản]</span></li>
-                                <li><a href="index.html"><i class="fa-solid fa-sign-out-alt"></i> Đăng xuất</a></li>
+                                <li><a href="login.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
                                 <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
                             </ul>
                         </nav>
@@ -83,18 +106,56 @@
                 </div>
             </div>
         
-         <div class="header_navbar-discount">
-            <ul class="header_navbar-discount-list">
-                <li class="header_navbar-discount-item"><a href="#"><i class=" header_navbar-dis-link header_navbar-dis-link--strong"></i> Sản phẩm Bonanhtai chính hãng</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-link "></i> Tin tức công nghệ</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-icon fa-solid fa-circle-check"></i> Dịch vụ sửa chữa</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-icon fa-solid fa-tags"></i> Chính sách & điều khoản</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-icon fa-solid fa-rotate"></i> Hướng dẫn mua hàng</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-icon fa-solid fa-truck-fast"></i> Chính sách vận chuyển</a></li>
-            </ul>
-         </div>
+            <div class="header_navbar-discount">
+                <ul class="header_navbar-discount-list">
 
+
+
+                    <li class="header_navbar-discount-item " >
+                    <a href="#" class="header_navbar-dis-link ">
+                        <i class="fa-solid fa-ticket"></i>                         
+                        Săn voucher
+                    </a>
+                    </li>
+
+
+                    <li class="header_navbar-discount-item" >   
+                    <a href="#" class="header_navbar-dis-link">
+                        <i class="fa-regular fa-newspaper"></i>
+                        Tin công nghệ
+                    </a>
+                    </li>
+
+
+                    <li class="header_navbar-discount-item" >
+                    <a href="#" class="header_navbar-dis-link ">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        Dịch vụ sửa chữa
+                    </a>
+                    </li>
+
+                     
+                    <li class="header_navbar-discount-item" >  
+                    <a href="#" class="header_navbar-dis-link">
+                        <i class="fa-solid fa-money-bill"></i>
+                         Thu cũ đổi mới
+                    </a>
+                    </li>
+
+
+                    <li class="header_navbar-discount-item" >
+                    <a href="#" class="header_navbar-dis-link">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        Giao nhanh trong 2h
+                    </a>
+                    </li>
+
+                </ul>
+    
+            </div>
+          
           </header>
+
 
          <nav class="main-nav">
              <ul>
@@ -106,46 +167,31 @@
                 <div class="row">
                     <div class="col l-2 m-0 c-0">
                         <nav class="container__category">
-                            <span class="header__category">Danh mục</span>
+                            <span class="header__category">Tìm Kiếm Nâng Cao</span>
                             <ul class="category__list">
+                                <div class="cap1">Thể loại:</div>
                                 <li class="category__item">
-                                    <a href="HP.html" class="category__item-link">
-                                        <img src="assets/img/logoHP.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        HP
-                                    </a>
+                                    <label><input type="checkbox" class="theloai" value="HP">HP</label>
+                                    <label><input type="checkbox" class="theloai" value="Dell">Dell</label>
+                                    <label><input type="checkbox" class="theloai" value="Asus">Asus</label>
+                                    <label><input type="checkbox" class="theloai" value="Acer">Acer</label>
+                                    <label><input type="checkbox" class="theloai" value="MSI">MSI</label>
                                 </li>
+                                <div class="cap1">Giá bán:</div>
                                 <li class="category__item">
-                                    <a href="#" class="category__item-link">
-                                        <img src="assets/img/logoDELL.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        DELL
-                                    </a>
+                                    <label><input type="checkbox" class="giaban" value="1">&lt; 100.000 đ</label>
+                                    <label><input type="checkbox" class="giaban" value="2">100.000 đ - 500.000 đ</label>
+                                    <label><input type="checkbox" class="giaban" value="3">500.000 đ - 1.000.000 đ</label>
                                </li>
-                                <li class="category__item">
-                                    <a href="#" class="category__item-link">
-                                    <img src="assets/img/logoAsus.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        ASUS
-                                    </a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="#" class="category__item-link">
-                                    <img src="assets/img/logoacer.jpg" alt="" class="category__item-icon" style="width: 24px;">
-                                    ACER
-                                    </a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="#" class="category__item-link">
-                                    <img src="assets/img/MSIlogo.png" alt="" class="category__item-icon" style="width: 24px;">
-                                    MSI
-                                    </a>
-                                </li>
+                               
                             </ul>
                         </nav>
                     </div>
                     <div class="col l-10 m-12 c-12">
                         <article class="row protech container__product">
                             <div class="Sale">
-                                <i class="Sale-icon fa-solid fa-thumbs-up"></i>
-                                <span class="Sale-text">TOP DEAL</span>
+                              
+                                <span class="Sale-text">KẾT QUẢ TÌM KIẾM</span>
                             </div>
                             <div class="product-list">
                                 <div class="col l-2 m-3 c-6 product-item">
@@ -184,6 +230,12 @@
                                                             17.190.000₫
                                                         </label>
                                                             <small class="price-present">-12%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
                                                 <div class="buy__now gutter">
@@ -229,6 +281,12 @@
                                                             19.900.000₫
                                                         </label>
                                                             <small class="price-present">-14%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
                                                 <div class="buy__now gutter">
@@ -274,6 +332,12 @@
                                                             41.990.000₫
                                                         </label>
                                                             <small class="price-present">-28%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
                                                 <div class="buy__now gutter">
@@ -319,6 +383,12 @@
                                                             18.890.000₫
                                                         </label>
                                                             <small class="price-present">-20%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
                                                 <div class="buy__now gutter">
@@ -364,6 +434,12 @@
                                                             1.490.000₫
                                                         </label>
                                                             <small class="price-present">-26%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
                                                 <div class="buy__now gutter">
@@ -409,6 +485,12 @@
                                                             450.000₫
                                                         </label>
                                                             <small class="price-present">-44%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
                                                 <div class="buy__now gutter">
@@ -866,9 +948,7 @@
 <div class="modal">
 <!--de sau-->
 </div>
-<script src="./main.js"></script>
-<script>
-window.location.href = window.location.origin + "./Admin/dashboard.htm";
-</script>
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>

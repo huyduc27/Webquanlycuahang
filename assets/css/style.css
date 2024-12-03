@@ -423,6 +423,49 @@ a:hover {
   color: red;
   font-weight: bold;
 } */
+.container__category {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+.header__category {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.category__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cap1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.category__item {
+    margin-bottom: 10px;
+}
+
+.category__item label {
+    display: block; /* Mỗi checkbox trên một dòng */
+    margin-bottom: 5px; /* Thêm khoảng cách giữa các checkbox */
+    cursor: pointer; /* Con trỏ chỉ tay khi hover */
+}
+
+.category__item input[type="checkbox"] {
+    margin-right: 8px; /* Thêm khoảng cách giữa checkbox và văn bản */
+}
+
 .container{
     background-color: #ddddddeb;
     padding: 20px 0;
@@ -738,6 +781,8 @@ a:hover {
     margin: 0 20px;
     border: none;
   }
+
+  
   /*----------------------------------------*/
 /* 	6.6 Li's Shopping Cart
 /*----------------------------------------*/
@@ -757,6 +802,7 @@ h1 {
 }
 
 .cart-items {
+
     margin: 20px 0;
     border-top: 1px solid #ddd;
     padding-top: 10px;
@@ -867,7 +913,7 @@ h2 {
 input[type="text"] {
     padding: 5px;
     width: 80%;
-    margin: 10px 0;
+
     border: 1px solid #ddd;
     border-radius: 4px;
 }
@@ -1042,3 +1088,63 @@ input[type="text"] {
     border-radius: 40px;
     box-shadow: 0 40px 100px rgba(162, 13, 13, 0.974);
 }
+
+
+.account-menu {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+  }
+  
+  .account-icon {
+    color :black;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 150px;
+    text-align: center;
+  }
+  
+  .dropdown-menu p {
+    font-weight: bold;
+    margin: 0 0 10px;
+    font-size: 16px;
+  }
+  
+  .dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    margin: 5px 0;
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-menu button:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  .account-menu:hover .dropdown-menu {
+    display: block;
+  }
+  
