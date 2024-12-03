@@ -867,7 +867,6 @@ h2 {
 input[type="text"] {
     padding: 5px;
     width: 80%;
-    margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
