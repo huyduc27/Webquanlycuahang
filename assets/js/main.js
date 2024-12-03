@@ -56,6 +56,7 @@
         });
 
 
+<<<<<<< HEAD
 
 
  //Hàm xử lý tìm kiếm
@@ -84,3 +85,17 @@ document.getElementById("cartLink").addEventListener("click", function (event) {
       alert(`Chào mừng ${username}, bạn có thể truy cập Giỏ hàng!`);
     }
   });
+=======
+        //Open Search Mobile 
+        function openSearchMb() {
+            document.querySelector(".header-middle-left").style.display = "none";
+            document.querySelector(".header-middle-center").style.display = "block";
+            document.querySelector(".header-middle-right-item.close").style.display = "block";
+            let liItem = document.querySelectorAll(".header-middle-right-item.open");
+            for(let i = 0; i < liItem.length; i++) {
+                liItem[i].style.setProperty("display", "none", "important")
+            }
+        }
+
+        
+>>>>>>> 9e806a840ad718c7fe0d87e6334eced5a935fe47

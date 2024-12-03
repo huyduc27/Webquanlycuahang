@@ -913,7 +913,10 @@ h2 {
 input[type="text"] {
     padding: 5px;
     width: 80%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9e806a840ad718c7fe0d87e6334eced5a935fe47
     border: 1px solid #ddd;
     border-radius: 4px;
 }
