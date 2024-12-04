@@ -47,15 +47,22 @@
                         
 
                     </div>
-                        <nav>
-                            <ul>
-                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
-                                <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
-                                <li><a href="#">Tra cứu đơn hàng</a></li>
-                                <li><a href="login.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
-                                <li><a href="cart.html" id = cartLink ><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
-                            </ul>
-                        </nav>
+                    <nav>
+                        <ul>
+                            <li><a href="indexlogin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
+                            <li><a href="#">Tra cứu đơn hàng</a></li>
+                            <div class="account-menu">
+                                <div class="account-icon"><i class="fa-solid fa-user"></i>Thanh</div>
+                                <div class="dropdown-menu">
+                                  <p style="padding-top: 5px; text-align: center; font-weight: bold;">Thanh</p>
+                                  <a href="order_history.html"> <button>Lịch sử mua hàng</button></a>
+                                  <a href="index.html"><button>Đăng xuất</button></a>
+                                </div>
+                              </div>
+                            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
+                        </ul>
+                    </nav>
 
 
                         <!-- <ul class="header_navbar-list">
@@ -145,7 +152,7 @@
             </div>
           </header>
 
-          <div class="cart-container">
+          <!-- <div class="cart-container">
             <h1>🛒 Giỏ Hàng Của Bạn</h1>
             <div class="cart-items">
                 <div class="cart-item">
@@ -163,10 +170,279 @@
                     <p class="item-total-price">₫1,850,000</p>
                     <button class="btn-delete">Xóa</button>
                 </div>
-            </div>
-            
+            </div> -->
+            <main>
+                <div class="container">
+                    <div class="cart-container">
+                        <h1 class="page-title">Your Shopping Cart</h1>
+                        <div class="cart-items">
+                            <table class="cart-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/Aqua.jpg" alt="Product 1" class="cart-item-image">
+                                            <div class="product-info">
+                                                <h3>Product 1</h3>
+                                                <p>Product description goes here</p>
+                                            </div>
+                                        </td>
+                                        <td>$9.99</td>
+                                        <td>
+                                            <input type="number" name="quantity_1" value="1" min="1" max="10" readonly>
+                                        </td>
+                                        <td>$9.99</td>
+                                        <td>
+                                            <button type="button" class="remove-btn">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/SAM.webp" alt="Product 2" class="cart-item-image">
+                                            <div class="product-info">
+                                                <h3>Product 2</h3>
+                                                <p>Product description goes here</p>
+                                            </div>
+                                        </td>
+                                        <td>$15.99</td>
+                                        <td>
+                                            <input type="number" name="quantity_2" value="2" min="1" max="10" readonly>
+                                        </td>
+                                        <td>$31.98</td>
+                                        <td>
+                                            <button type="button" class="remove-btn">Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/RiderKick.jpg" alt="Product 3" class="cart-item-image">
+                                            <div class="product-info">
+                                                <h3>Product 3</h3>
+                                                <p>Product description goes here</p>
+                                            </div>
+                                        </td>
+                                        <td>$11.99</td>
+                                        <td>
+                                            <input type="number" name="quantity_3" value="1" min="1" max="10" readonly>
+                                        </td>
+                                        <td>$11.99</td>
+                                        <td>
+                                            <button type="button" class="remove-btn">Remove</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="button" class="update-cart-btn">Update Cart</button>
+                        </div>
+                        <div class="cart-summary">
+                            <h2>Order Summary</h2>
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span>$53.96</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span>$5.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span>$58.96</span>
+                            </div>
+                            <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
 
-        <script src="assets/js/script.js"></script>
+        <script>
+            const removeBtns = document.querySelectorAll('.remove-btn');
+  const quantityInputs = document.querySelectorAll('input[type="number"]');
+  const updateCartBtn = document.querySelector('.update-cart-btn');
+  const subtotalSpan = document.getElementById('subtotal');
+  const totalSpan = document.getElementById('total');
+
+  // Xóa sản phẩm
+  removeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const row = btn.closest('tr');
+      row.remove();
+      updateCartSummary();
+    });
+  });
+
+  // Cập nhật giỏ hàng
+  updateCartBtn.addEventListener('click', updateCartSummary);
+
+  // Thay đổi số lượng
+  quantityInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      const row = input.closest('tr');
+      const price = parseFloat(row.cells[1].textContent.replace('$', ''));
+      const quantity = parseInt(input.value);
+      const total = price * quantity;
+      row.querySelector('.total-price').textContent = '$' + total.toFixed(2);
+      updateCartSummary();
+    });
+  });
+
+  // Cập nhật tổng tiền
+  function updateCartSummary() {
+    let subtotal = 0;
+    const rows = document.querySelectorAll('.cart-table tbody tr');
+    rows.forEach(row => {
+      const total = parseFloat(row.querySelector('.total-price').textContent.replace('$', ''));
+      subtotal += total;
+    });
+    subtotalSpan.textContent = '$' + subtotal.toFixed(2);
+    totalSpan.textContent = '$' + (subtotal + 5).toFixed(2); // 5 là phí vận chuyển
+  }
+        </script>
+    
+    <footer class="end">
+        <div class="row row-end">
+            <div class="col l-2-4 m-4 c-6">
+                <h3 class="end__heading">HỖ TRỢ KHÁCH HÀNG</h3>
+                <ul class="end__heading-list">
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Thẻ Ưu Đãi</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Ưu Đãi Dành Cho Doanh Nghiệp</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Hướng Dẫn Mua Online</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Dịch Vụ Sửa Chửa</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Chính Sách Trả Góp</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-2-4 m-4 c-6">
+                <h3 class="end__heading">Về Bốn Anh Tài</h3>
+                <ul class="end__heading-list">
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Giới Thiệu Về Bốn Anh Tài </a>
+                    </li>
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Quy Chế Hoạt Động</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Tuyển Dụng</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Điều Khoản</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <a href="#" class="end__heading-link">Chính Sách Bảo Mật</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-2-4 hide-on-mobile-table">
+                <h3 class="end__heading">THANH TOÁN</h3>
+                <ul class="end__pay-list">
+                    <li class="end__pay-item">
+                        <a href="#" class="end__pay-item-link"><img
+                                src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8"
+                                alt="logo"></a>
+                    </li>
+                    <li class="end__pay-item">
+                        <a href="#" class="end__pay-item-link"><img
+                                src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08"
+                                alt="logo"></a>
+                    </li>
+                </ul>
+                <h3 class="end__heading">ĐƠN VỊ VẬN CHUYỂN</h3>
+                <ul class="end__deliver-list">
+                    <li class="end__deliver-item">
+                        <a href="#" class="end__deliver-item-link"><img
+                                src="https://down-vn.img.susercontent.com/file/59270fb2f3fbb7cbc92fca3877edde3f"
+                                alt="logo"></a>
+                    </li>
+                    <li class="end__deliver-item">
+                        <a href="#" class="end__deliver-item-link"><img
+                                src="https://down-vn.img.susercontent.com/file/0d349e22ca8d4337d11c9b134cf9fe63"
+                                alt="logo"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-2-4 m-4 c-6">
+                <h3 class="end__heading">THEO DÕI Bốn Anh Tài</h3>
+                <ul class="end__heading-list">
+                    <li class="end__heading-item">
+                        <i class="end__heading-link-icon fa-brands fa-facebook"></i>
+                        <a href="#" class="end__heading-link">
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="end__heading-item">
+                        <i class="end__heading-link-icon fa-brands fa-square-instagram"></i>
+                        <a href="#" class="end__heading-link">
+                            Instagram
+                        </a>
+                    </li>
+                    <li class="end__heading-item">
+                        <i class="end__heading-link-icon fa-brands fa-linkedin"></i>
+                        <a href="#" class="end__heading-link">
+                            LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-2-4 m-8 c-6">
+                <h3 class="end__heading">THÔNG TIN LIÊN HỆ</h3>
+                <ul class="end__heading-list">
+                    <li class="end__heading-item">
+                        <p class="end__heading-p">Tổng đài hỗ trợ</p>
+                        <a href="#" class="end__heading-link">1900-6713</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <p class="end__heading-p">Email CSKH</p>
+                        <a href="#" class="end__heading-link">cskh@bonanhtai.vn</a>
+                    </li>
+                    <li class="end__heading-item">
+                        <p class="end__heading-p">Hợp tác phát triển</p>
+                        <a href="#" class="end__heading-link">hoptac@bonanhtai.vn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="end__heading-more">
+            <span class="end__heading-law">© 2024 - Công ty Bốn Anh Tài | Verified by:</span>
+            <a href="#" class="end-certificate-link">
+                <img src="./assets/imgs/BCT.png" alt="" class="end-certificate-img">
+            </a>
+            </a>
+            <a href="#" class="end-certificate-link">
+                <img src="https://img.lazcdn.com/g/tps/tfs/TB1jyJMv.H1gK0jSZSyXXXtlpXa-184-120.png" style="height: 60px;" alt="" class="end-certificate-img">
+            </a>
+            <a href="#" class="end-certificate-link">
+                <img src="./assets/imgs/NKVHG.png" alt="" class="end-certificate-img-HG">
+            </a>
+            <a href="#" class="end-certificate-link">
+                <img src="https://images.dmca.com/Badges/dmca-badge-w150-2x1-02.png?ID=73ee7811-7aa7-44d0-bb06-6c0df0da41d8" style="height: 60px;" alt="" class="end-certificate-img">
+            </a>
+        </div>
+         
+            </footer>
+        <footer class="end__heading-end">
+          <div class="end__heading-end-information-group">
+            <span class="end__heading-end-information end__heading-end-information-name"><b>Bốn Anh Tài</b></span>
+            <span class="end__heading-end-information">Địa chỉ:  Hollywood</span>
+            <span class="end__heading-end-information">Chịu Trách Nhiệm Quản Lý Nội Dung: Bốn Anh Tài</span>
+            <span class="end__heading-end-information">© 2024 - Bản quyền thuộc về Bốn Anh Tài</span>
+         </div>
+        </footer>
     </body>
-          
+    </html>        
           
