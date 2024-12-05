@@ -49,7 +49,7 @@
                     </div>
                         <nav>
                             <ul>
-                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                                <li><a href="indexlogin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
                                 <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
                                 <li><a href="#">Tra cứu đơn hàng</a></li>
                                 <div class="account-menu">
@@ -166,13 +166,13 @@
                             <span class="header__category">Danh mục</span>
                             <ul class="category__list">
                                 <li class="category__item">
-                                    <a href="HP.html" class="category__item-link">
+                                    <a href="HPlogin.html" class="category__item-link">
                                         <img src="assets/img/logoHP.png" alt="" class="category__item-icon" style="width: 24px;">
                                         HP
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="#" class="category__item-link">
+                                    <a href="DELLlogin.html" class="category__item-link">
                                         <img src="assets/img/logoDELL.png" alt="" class="category__item-icon" style="width: 24px;">
                                         DELL
                                     </a>
@@ -923,7 +923,20 @@
 <div class="modal">
 <!--de sau-->
 </div>
-<script src="assets/js/main.js"></script>
+<script >
+    function handleSearch() {
+    // Lấy giá trị tìm kiếm từ input
+    const searchQuery = document.getElementById('searchInput').value.trim();
+
+    // Kiểm tra xem người dùng có nhập từ khóa không
+    if (searchQuery) {
+        // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
+        window.location.href = `foundlogin.html`;
+    } else {
+        alert('Vui lòng nhập từ khóa để tìm kiếm!');
+    }
+}  
+</script>
 
 </body>
 </html>

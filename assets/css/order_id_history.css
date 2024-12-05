@@ -79,11 +79,13 @@
 .order-info {
     color: #666;
     line-height: 1.6;
+    font-size: 14px;
 }
 
 /* Order Items Styles */
 .order-items {
     margin-bottom: 30px;
+    font-size:14px;
 }
 
 .order-items h2 {

@@ -28,31 +28,48 @@
                     </div>
                         
                         
-                    <div class="header_search">
-                        <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
-                        <input 
-                            type="text" 
-                            id="searchInput" 
-                            class="header_search-input" 
-                            placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
-                        >
+                        <!-- <div class="header_search">
+                                <i class="header_search-icon fa-solid fa-magnifying-glass "></i>
+                                <input type="text" id="searchInput" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm "
+                                oninput="searchProducts()">
+                                
+                                <button type="button" class="header_search-button" > Tìm kiếm </button> 
+                              
+                                <button class="filter-btn"><i class="fa-light fa-filter-list"></i><span>Lọc</span></button>
+                        </div> -->
+                        <div class="header_search">
+                            <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                class="header_search-input" 
+                                placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                            >
+                            
+                            <button 
+                                type="button" 
+                                class="header_search-button" 
+                                onclick="handleSearch()"
+                            >
+                                Tìm kiếm
+                            </button>
+                            
+ 
+                        </div>
                         
-                        <button 
-                            type="button" 
-                            class="header_search-button" 
-                            onclick="handleSearch()"
-                        >
-                            Tìm kiếm
-                        </button>
-                        
-
-                    </div>
                         <nav>
                             <ul>
-                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                                <li><a href="indexlogin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
                                 <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
                                 <li><a href="#">Tra cứu đơn hàng</a></li>
-                                <li><a href="login.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
+                                <div class="account-menu">
+                                    <div class="account-icon"><i class="fa-solid fa-user"></i>Thanh</div>
+                                    <div class="dropdown-menu">
+                                      <p style="padding-top: 5px; text-align: center; font-weight: bold;">Thanh</p>
+                                      <a href="order_history.html"> <button>Lịch sử mua hàng</button></a>
+                                      <a href="index.html"><button>Đăng xuất</button></a>
+                                    </div>
+                                  </div>
                                 <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
                             </ul>
                         </nav>
@@ -143,8 +160,9 @@
                 </ul>
     
             </div>
-
+          
           </header>
+
 
          <nav class="main-nav">
              <ul>
@@ -156,46 +174,32 @@
                 <div class="row">
                     <div class="col l-2 m-0 c-0">
                         <nav class="container__category">
-                            <span class="header__category">Danh mục</span>
+                            <span class="header__category">Tìm Kiếm Nâng Cao</span>
                             <ul class="category__list">
+                                <div class="cap1">Hãng laptop:</div>
                                 <li class="category__item">
-                                    <a href="HP.html" class="category__item-link">
-                                        <img src="assets/img/logoHP.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        HP
-                                    </a>
+                                    <label><input type="checkbox" class="theloai" value="HP">HP</label>
+                                    <label><input type="checkbox" class="theloai" value="Dell">Dell</label>
+                                    <label><input type="checkbox" class="theloai" value="Asus">Asus</label>
+                                    <label><input type="checkbox" class="theloai" value="Acer">Acer</label>
+                                    <label><input type="checkbox" class="theloai" value="MSI">MSI</label>
                                 </li>
+                                <div class="cap1">Giá bán:</div>
                                 <li class="category__item">
-                                    <a href="DELL.html" class="category__item-link">
-                                        <img src="assets/img/logoDELL.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        DELL
-                                    </a>
+                                    <label><input type="checkbox" class="giaban" value="1">&lt; 15.000.000 đ</label>
+                                    <label><input type="checkbox" class="giaban" value="2">15.000.000 đ - 20.000.000 đ</label>
+                                    <label><input type="checkbox" class="giaban" value="3">&gt; 25.000.000 đ</label>
                                </li>
-                                <li class="category__item">
-                                    <a href="ASUS.html" class="category__item-link">
-                                    <img src="assets/img/logoAsus.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        ASUS
-                                    </a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="ACER.html" class="category__item-link">
-                                    <img src="assets/img/logoacer.jpg" alt="" class="category__item-icon" style="width: 24px;">
-                                    ACER
-                                    </a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="MSI.html" class="category__item-link">
-                                    <img src="assets/img/MSIlogo.png" alt="" class="category__item-icon" style="width: 24px;">
-                                    MSI
-                                    </a>
-                                </li>
+                               <button type="submit" class="filter-button">Search</button>
                             </ul>
                         </nav>
                     </div>
                     <div class="col l-10 m-12 c-12">
                         <article class="row protech container__product">
                             <div class="Sale">
-                                <i class="Sale-icon fa-solid fa-thumbs-up"></i>
-                                <span class="Sale-text">TOP DEAL</span>
+                              
+                                <span href="foundlogin.html" 
+                                class="Sale-text">KẾT QUẢ TÌM KIẾM</span>
                             </div>
                             <div class="product-list">
                                 <div class="col l-2 m-3 c-6 product-item">
@@ -204,13 +208,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/kzBypPEWvnhswg1Nzu5UKdtXLCckjtiDo4hz1a3MIkveVxszUnGG6c_gniTTu6TQMaTAMxQ2t__uSFI9nopN7lKu1qFyIc0b=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/BGBHU5q0aUWtGXXtrQQm6jpDBf0dnxoZ2FPt3VE_Rx_F9zT57Jct-p0EfNTr6t8_EPyJ7enaMMH2pqzA4S0Ug3eNh0qWc_Ozyw=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3> Laptop HP 15s-fq5228TU - 8U240PA (i3-1215U/ RAM 8GB/ Onboard/ 512GB SSD/ Windows 11)
-                                                        </h3>
+                                                        <h3> Laptop Dell Inspiron 3520 - 25P2312 (i5-1235U/RAM 16GB/512GB SSD/ Windows 11 + Office)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -256,12 +259,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/dj1rfOCVQwqEvrYIB5XeeToMoZld0pLtecen7BdSInfL19UblNF0yb1wivvrRm0jfoDPrt89VFg-YE0-ZDANbJ4OJT2u-vX60Q=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/XYISynRsDZRXHmRVIfbxGEIuMOG3l7EhUId6qdfvoUoKzVdQTUujOi-WZxYYItWyHv5lCCKDc4IHM0sgujTpu3Ax3skFwVrc=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop gaming HP Victus 16-r0225TX - 9Q976PA (i7-13700H/RAM 32GB/GeForce RTX 4050/512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ACER Swift Lite 14 AI SFL14-51M-56HS (Ultra 5-125U/RAM 16GB/Onboard/512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -307,12 +310,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/AxmeiGflaFiDdBh-ZXo0pLaomjCBL8uNlW2vxl644hCrIFCHuN0w-lwstM3HzoH11SDU6U-xeh0QEVFA6UmGTtTxHTVQmXA=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/tF2bZBVeZ2dAEUVqmbdUJ9pRJOJnaa0-XVi7AzhfXej6Ah5SMzhuDnBI-ttrX7_uKkhad-O2mjG_edrEVhfE1H8B9ZBthOJr=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop HP 15-fd0235TU - 9Q970PA (i5-1334U/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop Dell Inspiron 5440 G14 - N4I7204W1 (Core 7 150U/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11 +Office)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -358,12 +361,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/o-CMjsYm7cZlsSPXelOYO2DckRmXkgkhwB2d9XnhsbuwA06lkdW_TeObDhfv-ibU7zQ2JBjFwTQ-C8bSepu7Wm9xz5KQyK6G=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/4nCCUBSgMqOnGfEM8ODKTchccFs-p_ZyeAy1zVES1AFOhxYu-DG1LjgQ4JAL-_ClwFsv_D1cnNmbBiEymQqwTpVNeIgfmfJ_=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop HP Pavilion X360 14-ek2017TU - 9Z2V5PA (Core 5 120U/ RAM 16GB/ Onboard/ 512GB SSD)</h3>
+                                                        <h3>Laptop MSI Stealth A16 AI+ A3XVGG - 208VN (Ryzen AI 9 HX 370/ RAM 32GB/ GeForce RTX™ 4070/ 2TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -409,12 +412,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/ENMtjc7r38HL6HgEmOzm4U60nGu027aI18IpzzRMIN9vEtB3TU1YPKVawXOlr5-xi04_rTWsNHGjLspXfLayurETwGRRWf4=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/B5svW_X10PrRetiNLpBkOrS3lpihaioY1vA-ccwK-FEPPugqCLJGT5DxTEogt5XGVsQ1IPRBXJdqhYMwgNJOgIKmsigoFUeKXQ=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop HP ProBook 450 G10 (i5-1340P/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS Zenbook S 14 UX5406SA-PV140WS (Ultra 7-258V/ RAM 32GB/ Onboard/ 1TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -460,12 +463,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/RgTNr71AoP4DrAJZaytUjbJIne5XVJmkNMY75o3NgMikOtFTWAcFb1qcm8v6vMGJlTC685gwQdT6HClkkOyVVPFi9UharM-6=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/ttzU7zhBvazkEbcVwKqI-zdKFdE6jfPIdTBP7lS6N2TJCeEyPldXGvSgFTQHgvbqEiH0xPMmkkncsZ1p9P9rlH2etUFOC9SM=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop AI HP Envy X360 14-fc0085TU - A19BVPA (Ultra 7-155U/RAM 32GB/Onboard/512GB SSD/Windows 11)</h3>
+                                                        <h3>Laptop ASUS TUF Gaming F15 FX507VV-LP304W (i7-13620H/RAM 16GB/GeForce RTX™ 4060/1TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -518,12 +521,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/Z5O3XpcJa75l-c7QCGgxjrqVHx5dP54OWzTl6YJ9ozfF1MAQqCMQ9HmZM1bRAjax-e20RlWAS6ihGltmSOzUAiYwZE8CRTj_Pw=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/A-yvXMHYt97dyL1_9xyhjvdA6fGg1uQU1i0izHyEWXaiSE3Hno1dOFUWN6_gF_8dGcg0M67Sn0FH6ug1xD10Yow1i31tP4UQ=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop AI HP Spectre x360 14-eu0051TU - A2NL3PA (Ultra 7-155H/RAM 16GB/Onboard/1TB SSD/Windows 11)</h3>
+                                                        <h3>Laptop AI ACER Predator Helios Neo 14 PHN14-51-99Y8 (Ultra 9 185H/RAM 32GB/GeForce RTX 4060/1TB SSD/Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -543,20 +546,8 @@
                                                 </div>
                                                 <strong class="product-price">
                                                     <span class="price-current">16.990.000₫ </span>
-                                                    <span class="price-and-discount">
-                                                        <label class="price-old black">
-                                                            17.190.000₫
-                                                        </label>
-                                                            <small class="price-present">-12%</small>
-                                                            <button class="add-to-cart">
-                                                                <i class="fa-solid fa-cart-shopping"></i>
-                                                            <button class="add-to-cart"></button>
-                                                            <div class="notification" style="display: none;">
-                                                                1 sản phẩm đã được thêm vào giỏ hàng!
-                                                            </div>
-                                                    </span>
                                                 </strong>
-                                                <div class="buy__now gutter">
+                                                <div class="buy__now">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -593,21 +584,15 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">13.690.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            15.190.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
-                                                            <button class="add-to-cart">
-                                                                <i class="fa-solid fa-cart-shopping"></i>
-                                                            <button class="add-to-cart"></button>
-                                                            <div class="notification" style="display: none;">
-                                                                1 sản phẩm đã được thêm vào giỏ hàng!
-                                                            </div>
+                                                            <small class="price-present">-9%</small>
                                                     </span>
                                                 </strong>
-                                                <div class="buy__now gutter">
+                                                <div class="buy__now">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -644,21 +629,9 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
-                                                    <span class="price-and-discount">
-                                                        <label class="price-old black">
-                                                            17.190.000₫
-                                                        </label>
-                                                            <small class="price-present">-12%</small>
-                                                            <button class="add-to-cart">
-                                                                <i class="fa-solid fa-cart-shopping"></i>
-                                                            <button class="add-to-cart"></button>
-                                                            <div class="notification" style="display: none;">
-                                                                1 sản phẩm đã được thêm vào giỏ hàng!
-                                                            </div>
-                                                    </span>
+                                                    <span class="price-current">28.990.000₫ </span>
                                                 </strong>
-                                                <div class="buy__now gutter">
+                                                <div class="buy__now">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -671,12 +644,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/mWRi2zjAARvC2Jx9hGFtz5L4XMDfzve_mepwCW4D6QrHLkfRYO_s1apXnsAszLOlvVEmWzhtJT10VtxBEJzTAADq_jrczg3i=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/Qi6XhuBkzSlpcSBVougTG9U7U27_knWMY58htvxUG4WQa92ISsgbgQaM2JhMqyLmJ_o1S_HoWUcRBMQoOfQoS-U2Rxcix5ie=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop HP Victus 15-fa1155TX (952R1PA) (i5-12450H/ RAM 16GB/ GeForce RTX™ 2050/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop MSI Prestige 14 AI Studio C1UDXG-058VN (Ultra 7-155H/ RAM 16GB/ GeForce RTX™ 3050/ 1TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -695,21 +668,15 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">31.890.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            35.890.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
-                                                            <button class="add-to-cart">
-                                                                <i class="fa-solid fa-cart-shopping"></i>
-                                                            <button class="add-to-cart"></button>
-                                                            <div class="notification" style="display: none;">
-                                                                1 sản phẩm đã được thêm vào giỏ hàng!
-                                                            </div>
+                                                            <small class="price-present">-11%</small>
                                                     </span>
                                                 </strong>
-                                                <div class="buy__now gutter">
+                                                <div class="buy__now">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -722,12 +689,13 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/zz52KU7iKjxBE7ybFhTmxzgBibSbMY5vI8BTLFYh38_r6YyssJ1_XNe4noWQBPyMMyOpc6f_xdWs9yOi-SAZEaxMuhKgLK1N9w=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/yh6NMMvxwBMnKUkZ-MTZvWv6bzpTVWaE9A0B1hz7cPxphnOuo3QvwZQbPdWV_11E6x-wN3wEFCXEweDeKjWCx-wX74N8lAlW=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop HP Probook 440 G11 - A74BHPT (Ultra 7-155U/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop MSI Modern 14 C13M - 611VN (i5-1335U/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11)
+</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -746,21 +714,15 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">270.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            400.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
-                                                            <button class="add-to-cart">
-                                                                <i class="fa-solid fa-cart-shopping"></i>
-                                                            <button class="add-to-cart"></button>
-                                                            <div class="notification" style="display: none;">
-                                                                1 sản phẩm đã được thêm vào giỏ hàng!
-                                                            </div>
+                                                            <small class="price-present">-32%</small>
                                                     </span>
                                                 </strong>
-                                                <div class="buy__now gutter">
+                                                <div class="buy__now">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -773,12 +735,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/8bHk7mnuJwOIyAwoKB-u9Qb17939U_83bOTHw1iXKCDr3jGzP7ech49sW-l7tENzz0wr6mH_r1pt4iGjuSArqlafOTwcmlfBfA=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/VuZEZpx1o_tPJubJRzDkHCBrJF-22o8vvmPyTDIJ6w_yeOhSwvBSdTqVFruwzM2Jh4g0XJ7bw1WWG0NUHxgtoSxKN9dg3bTa=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop HP ProBook 440 G10 - 873C1PA (i7-1360P/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop Dell Inspiron 16 5630 - H6KRV (i5-1340P/ RAM 16GB/ GeForce RTX™ 2050/ 512GB SSD/ Windows 11 + Office)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -797,21 +759,15 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">565.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            790.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
-                                                            <button class="add-to-cart">
-                                                                <i class="fa-solid fa-cart-shopping"></i>
-                                                            <button class="add-to-cart"></button>
-                                                            <div class="notification" style="display: none;">
-                                                                1 sản phẩm đã được thêm vào giỏ hàng!
-                                                            </div>
+                                                            <small class="price-present">-28%</small>
                                                     </span>
                                                 </strong>
-                                                <div class="buy__now gutter">
+                                                <div class="buy__now">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -1000,7 +956,20 @@
 <div class="modal">
 <!--de sau-->
 </div>
-<script src="assets/js/main.js"></script>
+<script>
+    function handleSearch() {
+    // Lấy giá trị tìm kiếm từ input
+    const searchQuery = document.getElementById('searchInput').value.trim();
+
+    // Kiểm tra xem người dùng có nhập từ khóa không
+    if (searchQuery) {
+        // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
+        window.location.href = `foundlogin.html`;
+    } else {
+        alert('Vui lòng nhập từ khóa để tìm kiếm!');
+    }
+}  
+</script>
 
 </body>
 </html>
