@@ -24,15 +24,39 @@
                     
                     <div class="header_width-search">
                             
-                        <img src="assets/img/BỐN ANH TÀI.png" alt="Logo GearVN" width="96" height="80">
+                        <img src="assets/img/large (2).png" alt="Logo GearVN" width="96" height="80">
                     </div>
                         
                         
-                        <div class="header_search">
+                        <!-- <div class="header_search">
                                 <i class="header_search-icon fa-solid fa-magnifying-glass "></i>
-                                <input type="text" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm ">
-                                <button type="button" class="header_search-button"> Tìm kiếm </button> 
+                                <input type="text" id="searchInput" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm "
+                                oninput="searchProducts()">
+                                
+                                <button type="button" class="header_search-button" > Tìm kiếm </button> 
+                              
+                                <button class="filter-btn"><i class="fa-light fa-filter-list"></i><span>Lọc</span></button>
+                        </div> -->
+                        <div class="header_search">
+                            <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                class="header_search-input" 
+                                placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                            >
+                            
+                            <button 
+                                type="button" 
+                                class="header_search-button" 
+                                onclick="handleSearch()"
+                            >
+                                Tìm kiếm
+                            </button>
+                            
+ 
                         </div>
+                        
                         <nav>
                             <ul>
                                 <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
@@ -129,8 +153,9 @@
                 </ul>
     
             </div>
-
+          
           </header>
+
 
          <nav class="main-nav">
              <ul>
@@ -142,46 +167,31 @@
                 <div class="row">
                     <div class="col l-2 m-0 c-0">
                         <nav class="container__category">
-                            <span class="header__category">Danh mục</span>
+                            <span class="header__category">Tìm Kiếm Nâng Cao</span>
                             <ul class="category__list">
+                                <div class="cap1">Hãng laptop:</div>
                                 <li class="category__item">
-                                    <a href="HP.html" class="category__item-link">
-                                        <img src="assets/img/logoHP.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        HP
-                                    </a>
+                                    <label><input type="checkbox" class="theloai" value="HP">HP</label>
+                                    <label><input type="checkbox" class="theloai" value="Dell">Dell</label>
+                                    <label><input type="checkbox" class="theloai" value="Asus">Asus</label>
+                                    <label><input type="checkbox" class="theloai" value="Acer">Acer</label>
+                                    <label><input type="checkbox" class="theloai" value="MSI">MSI</label>
                                 </li>
+                                <div class="cap1">Giá bán:</div>
                                 <li class="category__item">
-                                    <a href="DELL.html" class="category__item-link">
-                                        <img src="assets/img/logoDELL.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        DELL
-                                    </a>
+                                    <label><input type="checkbox" class="giaban" value="1">&lt; 15.000.000 đ</label>
+                                    <label><input type="checkbox" class="giaban" value="2">15.000.000 đ - 20.000.000 đ</label>
+                                    <label><input type="checkbox" class="giaban" value="3">&gt; 25.000.000 đ</label>
                                </li>
-                                <li class="category__item">
-                                    <a href="ASUS.html" class="category__item-link">
-                                    <img src="assets/img/logoAsus.png" alt="" class="category__item-icon" style="width: 24px;">
-                                        ASUS
-                                    </a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="ACER.html" class="category__item-link">
-                                    <img src="assets/img/logoacer.jpg" alt="" class="category__item-icon" style="width: 24px;">
-                                    ACER
-                                    </a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="MSI.html" class="category__item-link">
-                                    <img src="assets/img/MSIlogo.png" alt="" class="category__item-icon" style="width: 24px;">
-                                    MSI
-                                    </a>
-                                </li>
+                               <button type="submit" class="filter-button">Search</button>
                             </ul>
                         </nav>
                     </div>
                     <div class="col l-10 m-12 c-12">
                         <article class="row protech container__product">
                             <div class="Sale">
-                                <i class="Sale-icon fa-solid fa-thumbs-up"></i>
-                                <span class="Sale-text">TOP DEAL</span>
+                              
+                                <span class="Sale-text">KẾT QUẢ TÌM KIẾM</span>
                             </div>
                             <div class="product-list">
                                 <div class="col l-2 m-3 c-6 product-item">
@@ -190,13 +200,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/ygeZg1QhFcnxMax0rZN6wAaw4-GF3A0uojRURy0CKVJudlUHKxieiVj9nNbyB6EtRxAD0nIKxVqGbQ_psIXkd7mYd27Z_6k=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/BGBHU5q0aUWtGXXtrQQm6jpDBf0dnxoZ2FPt3VE_Rx_F9zT57Jct-p0EfNTr6t8_EPyJ7enaMMH2pqzA4S0Ug3eNh0qWc_Ozyw=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3> Laptop MSI Sword 16 HX B14VFKG-045VN (i7-14700HX/ RAM 16GB/ GeForce RTX™ 4060/ 1TB SSD/ Windows 11)
-                                                        </h3>
+                                                        <h3> Laptop Dell Inspiron 3520 - 25P2312 (i5-1235U/RAM 16GB/512GB SSD/ Windows 11 + Office)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -242,12 +251,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/4nCCUBSgMqOnGfEM8ODKTchccFs-p_ZyeAy1zVES1AFOhxYu-DG1LjgQ4JAL-_ClwFsv_D1cnNmbBiEymQqwTpVNeIgfmfJ_=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/XYISynRsDZRXHmRVIfbxGEIuMOG3l7EhUId6qdfvoUoKzVdQTUujOi-WZxYYItWyHv5lCCKDc4IHM0sgujTpu3Ax3skFwVrc=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI Stealth A16 AI+ A3XVGG - 208VN (Ryzen AI 9 HX 370/ RAM 32GB/ GeForce RTX™ 4070/ 2TB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ACER Swift Lite 14 AI SFL14-51M-56HS (Ultra 5-125U/RAM 16GB/Onboard/512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -293,12 +302,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/12V1C7rPIp0qwESFSujs2X58i3tzbVl03SkBXEWsFIQA6O2c530VBMPZB6jDjw912USSoRZHJIpdK_G2kMbDu6PR8DhAq4-n=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/tF2bZBVeZ2dAEUVqmbdUJ9pRJOJnaa0-XVi7AzhfXej6Ah5SMzhuDnBI-ttrX7_uKkhad-O2mjG_edrEVhfE1H8B9ZBthOJr=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI Prestige A16 AI+ A3HMG-045VN (Ryzen AI 9 365/ RAM 32GB/ Onboard graphics/ 1TB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop Dell Inspiron 5440 G14 - N4I7204W1 (Core 7 150U/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11 +Office)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -344,12 +353,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/srDzcBR5JS_BlB-Iic4M-Rfk5DnOm3FCHkqVekwzgIQW6ZG5yItMnIPIB2g_6lB3XUKOKKnbWZejbd9cMdOkn2XE23D07pI=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/4nCCUBSgMqOnGfEM8ODKTchccFs-p_ZyeAy1zVES1AFOhxYu-DG1LjgQ4JAL-_ClwFsv_D1cnNmbBiEymQqwTpVNeIgfmfJ_=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI Katana A15 AI B8VG-466VN (Ryzen 9 8945HS/ RAM 16GB/ GeForce RTX™ 4070/ 1TB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop MSI Stealth A16 AI+ A3XVGG - 208VN (Ryzen AI 9 HX 370/ RAM 32GB/ GeForce RTX™ 4070/ 2TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -395,12 +404,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/arL4Ey1SxltXRMQbTX901Ywrx9HA83X9EtwiupIJPjoMhqpxNJHReh9t_J6jHna-XSN4mLx1n1zVuy10rJZTLfITg64LeKGC=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/B5svW_X10PrRetiNLpBkOrS3lpihaioY1vA-ccwK-FEPPugqCLJGT5DxTEogt5XGVsQ1IPRBXJdqhYMwgNJOgIKmsigoFUeKXQ=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI Cyborg 14 A13UDX-099VN (i7-13620H/ RAM 16GB/ GeForce RTX™ 3050/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS Zenbook S 14 UX5406SA-PV140WS (Ultra 7-258V/ RAM 32GB/ Onboard/ 1TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -446,12 +455,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/8SDc61mvkk5y2ZcsgQ3IEEKTnvyAyWBjYGyRLzrGv2P7D2q8r3kx_w6FYMZBW-eO4QaNgm-p65lUQg59RefONFVyxsDceixY=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/ttzU7zhBvazkEbcVwKqI-zdKFdE6jfPIdTBP7lS6N2TJCeEyPldXGvSgFTQHgvbqEiH0xPMmkkncsZ1p9P9rlH2etUFOC9SM=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI Crosshair 16 HX D14VFKG (i9-14900HX/ RAM 16GB/ GeForce RTX™ 4060/ 1TB SSD/)</h3>
+                                                        <h3>Laptop ASUS TUF Gaming F15 FX507VV-LP304W (i7-13620H/RAM 16GB/GeForce RTX™ 4060/1TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -504,12 +513,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/Rnv6Co8H18tfcMJVgWjvZFZCktmvMWSULorb56rw_QNf55wn5sxG-JNYrxSEoXrhQk7NPqrmuIQ7xu0pyCFkGszfky8Mx_-l=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/A-yvXMHYt97dyL1_9xyhjvdA6fGg1uQU1i0izHyEWXaiSE3Hno1dOFUWN6_gF_8dGcg0M67Sn0FH6ug1xD10Yow1i31tP4UQ=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop cũ MSI Modern 15 A5M-238VN (AMD Ryzen 5 5500U) (Xám)</h3>
+                                                        <h3>Laptop AI ACER Predator Helios Neo 14 PHN14-51-99Y8 (Ultra 9 185H/RAM 32GB/GeForce RTX 4060/1TB SSD/Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -543,12 +552,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/639Hcf_8CzQyYXgRp8KhFk0tkbolK8ISwxNwn5C8L0eg11cFyIPl__OydraT2w82X3LZ6FvnxA1a29CjhdjB7UuvtadU_fdUbA=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/KGqk74SUV07UBXjqf1H4laM6J4ctSkBLoPMiHu3FYPxs3g2Ucxka8P749TozQ9VwVzrkJ5k5voPWWSus3u-O7a3uasLOzx00=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop gaming MSI Stealth 16 Mercedes-AMG Motorsport A13VG (i9-13900H/RAM 32GB/GeForce RTX 4070/2TB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop gaming HP Victus 16-r0128TX - 8C5N3PA (i5-13450HX/RAM 16GB/GeForce RTX 4050/512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -588,12 +597,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/2Nx4upAH8p9qTEiVSb4KM6L9pSksN53ekUtSFE6pWu4eqeTwoXbrewLT-AKB2nJN_7m2HJQKvsNU-l3R-MjOjCVAG_sCW2D8=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/Mhii7Qf4-sBh0llsvOAl5THfejqRwZDukFahEo-7QdZdaZEkGnWOFVzte_BmxUHsGniSIL7aVHZ7TgALDydQlMDiiB5z6I_e=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI Prestige 13 Evo A13M -081VN (i7-1360P/ RAM 16GB/ Onboard graphics/ 1TB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop HP ProBook 440 G10 (i7-1355U/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -627,12 +636,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/SMGmV7jm499k73_jgogYYK2UOTOV7zLDcbqOs-nOmWUZGjfibrzx9IT5aawv-jVMd14uhiAs4xZxYsH3zXCRShMuP1JcPxDDqQ=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/Qi6XhuBkzSlpcSBVougTG9U7U27_knWMY58htvxUG4WQa92ISsgbgQaM2JhMqyLmJ_o1S_HoWUcRBMQoOfQoS-U2Rxcix5ie=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI GF63 Thin 12VE-460VN (i5-12450H) (Đen)</h3>
+                                                        <h3>Laptop MSI Prestige 14 AI Studio C1UDXG-058VN (Ultra 7-155H/ RAM 16GB/ GeForce RTX™ 3050/ 1TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -672,12 +681,13 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/HMqYGk1yQHCHu9tS3BlbkZjALZll0ulgdMix8vQCO1k3ySYakD36yxfx0TbXUmi1gNdM2sP2UEfHDWusjCuAjJuYNxgZoyo=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/yh6NMMvxwBMnKUkZ-MTZvWv6bzpTVWaE9A0B1hz7cPxphnOuo3QvwZQbPdWV_11E6x-wN3wEFCXEweDeKjWCx-wX74N8lAlW=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI Modern 14 C13M - 608VN (i5-1335U/ RAM 16GB/ Onboard graphics/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop MSI Modern 14 C13M - 611VN (i5-1335U/ RAM 16GB/ Onboard/ 512GB SSD/ Windows 11)
+</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -717,12 +727,12 @@
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/yh6NMMvxwBMnKUkZ-MTZvWv6bzpTVWaE9A0B1hz7cPxphnOuo3QvwZQbPdWV_11E6x-wN3wEFCXEweDeKjWCx-wX74N8lAlW=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/VuZEZpx1o_tPJubJRzDkHCBrJF-22o8vvmPyTDIJ6w_yeOhSwvBSdTqVFruwzM2Jh4g0XJ7bw1WWG0NUHxgtoSxKN9dg3bTa=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop MSI Modern 14 C13M - 611VN (i5-1335U/ RAM 16GB/ Onboard graphics/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop Dell Inspiron 16 5630 - H6KRV (i5-1340P/ RAM 16GB/ GeForce RTX™ 2050/ 512GB SSD/ Windows 11 + Office)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -938,7 +948,7 @@
 <div class="modal">
 <!--de sau-->
 </div>
-<script src="./main.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>

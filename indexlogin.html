@@ -24,22 +24,42 @@
                     
                     <div class="header_width-search">
                             
-                        <img src="assets/img/large (2).png" alt="Logo GearVN" width="96" height="80">
+                        <img src="assets/img/BỐN ANH TÀI.png" alt="Logo GearVN" width="96" height="80">
                     </div>
                         
                         
-                        <div class="header_search">
-                                <i class="header_search-icon fa-solid fa-magnifying-glass "></i>
-                                <input type="text" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm ">
-                                <button type="button" class="header_search-button"> Tìm kiếm </button> 
-                        </div>
+                    <div class="header_search">
+                        <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="header_search-input" 
+                            placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                        >
+                        
+                        <button 
+                            type="button" 
+                            class="header_search-button" 
+                            onclick="handleSearch()"
+                        >
+                            Tìm kiếm
+                        </button>
+                        
+
+                    </div>
                         <nav>
                             <ul>
                                 <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
                                 <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
                                 <li><a href="#">Tra cứu đơn hàng</a></li>
-                                <li><span><i class="fa-solid fa-user"></i> Xin chào, [Tên Tài Khoản]</span></li>
-                                <li><a href="index.html"><i class="fa-solid fa-sign-out-alt"></i> Đăng xuất</a></li>
+                                <div class="account-menu">
+                                    <div class="account-icon"><i class="fa-solid fa-user"></i>Thanh</div>
+                                    <div class="dropdown-menu">
+                                      <p style="padding-top: 5px; text-align: center; font-weight: bold;">Thanh</p>
+                                      <a href="order_history.html"> <button>Lịch sử mua hàng</button></a>
+                                      <a href="index.html"><button>Đăng xuất</button></a>
+                                    </div>
+                                  </div>
                                 <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
                             </ul>
                         </nav>
@@ -83,16 +103,53 @@
                 </div>
             </div>
         
-         <div class="header_navbar-discount">
-            <ul class="header_navbar-discount-list">
-                <li class="header_navbar-discount-item"><a href="#"><i class=" header_navbar-dis-link header_navbar-dis-link--strong"></i> Sản phẩm Bonanhtai chính hãng</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-link "></i> Tin tức công nghệ</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-icon fa-solid fa-circle-check"></i> Dịch vụ sửa chữa</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-icon fa-solid fa-tags"></i> Chính sách & điều khoản</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-icon fa-solid fa-rotate"></i> Hướng dẫn mua hàng</a></li>
-                <li class="header_navbar-discount-item"><a href="#"><i class="header_navbar-dis-icon fa-solid fa-truck-fast"></i> Chính sách vận chuyển</a></li>
-            </ul>
-         </div>
+            <div class="header_navbar-discount">
+                <ul class="header_navbar-discount-list">
+
+
+
+                    <li class="header_navbar-discount-item " >
+                    <a href="#" class="header_navbar-dis-link ">
+                        <i class="fa-solid fa-ticket"></i>                         
+                        Săn voucher
+                    </a>
+                    </li>
+
+
+                    <li class="header_navbar-discount-item" >   
+                    <a href="#" class="header_navbar-dis-link">
+                        <i class="fa-regular fa-newspaper"></i>
+                        Tin công nghệ
+                    </a>
+                    </li>
+
+
+                    <li class="header_navbar-discount-item" >
+                    <a href="#" class="header_navbar-dis-link ">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        Dịch vụ sửa chữa
+                    </a>
+                    </li>
+
+                     
+                    <li class="header_navbar-discount-item" >  
+                    <a href="#" class="header_navbar-dis-link">
+                        <i class="fa-solid fa-money-bill"></i>
+                         Thu cũ đổi mới
+                    </a>
+                    </li>
+
+
+                    <li class="header_navbar-discount-item" >
+                    <a href="#" class="header_navbar-dis-link">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        Giao nhanh trong 2h
+                    </a>
+                    </li>
+
+                </ul>
+    
+            </div>
 
           </header>
 
@@ -866,9 +923,7 @@
 <div class="modal">
 <!--de sau-->
 </div>
-<script src="./main.js"></script>
-<script>
-window.location.href = window.location.origin + "./Admin/dashboard.htm";
-</script>
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
