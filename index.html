@@ -28,17 +28,26 @@
                     </div>
                         
                         
+  
                         <div class="header_search">
-                                <i class="header_search-icon fa-solid fa-magnifying-glass "></i>
-                                <input type="text" id="searchInput" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm "
-                                oninput="searchProducts()">
-                                
-                                <button type="button" class="header_search-button"> Tìm kiếm </button> 
-                                
-                                <button class="filter-btn"><i class="fa-light fa-filter-list"></i><span>Lọc</span></button>
+                            <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                class="header_search-input" 
+                                placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                            >
+                            
+                            <button 
+                                type="button" 
+                                class="header_search-button" 
+                                onclick="handleSearch()"
+                            >
+                                Tìm kiếm
+                            </button>
+                            
+
                         </div>
-                        
-                        
                         
                         <nav>
                             <ul>
@@ -46,7 +55,7 @@
                                 <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
                                 <li><a href="#">Tra cứu đơn hàng</a></li>
                                 <li><a href="login.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
-                                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
+                                <li><a href="cart.html" id="cartLink"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
                             </ul>
                         </nav>
 
@@ -138,35 +147,6 @@
             </div>
           
           </header>
-          <div class="advanced-search" style ="display : none">
-            <div class="container">
-                <div class="advanced-search-category">
-                    <span>Phân loại </span>
-                    <select name="" id="advanced-search-category-select" onchange="searchProducts()">
-                        <option>Tất cả</option>
-                        <option>HP</option>
-                        <option>Dell</option>
-                        <option>ASUS</option>
-                        <option>ACER</option>
-                        <option>MSI</option>
-                        
-                    </select>
-                </div>
-                <div class="advanced-search-price">
-                    <span>Giá từ</span>
-                    <input type="number" placeholder="tối thiểu" id="min-price" onchange="searchProducts()">
-                    <span>đến</span>
-                    <input type="number" placeholder="tối đa" id="max-price" onchange="searchProducts()">
-                    <button id="advanced-search-price-btn"><i class="fa-light fa-magnifying-glass-dollar"></i></button>
-                </div>
-                <div class="advanced-search-control">
-                    <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-regular fa-arrow-up-short-wide"></i></button>
-                    <button id="sort-descending" onclick="searchProducts(2)"><i class="fa-regular fa-arrow-down-wide-short"></i></button>
-                    <button id="reset-search" onclick="searchProducts(0)"><i class="fa-light fa-arrow-rotate-right"></i></button>
-                    <button onclick="closeSearchAdvanced()"><i class="fa-light fa-xmark"></i></button>
-                </div>
-            </div>
-        </div>
 
          <nav class="main-nav">
              <ul>
@@ -187,19 +167,19 @@
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="#" class="category__item-link">
+                                    <a href="DELL.html" class="category__item-link">
                                         <img src="assets/img/logoDELL.png" alt="" class="category__item-icon" style="width: 24px;">
                                         DELL
                                     </a>
                                </li>
                                 <li class="category__item">
-                                    <a href="#" class="category__item-link">
+                                    <a href="ASUS.html" class="category__item-link">
                                     <img src="assets/img/logoAsus.png" alt="" class="category__item-icon" style="width: 24px;">
                                         ASUS
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="#" class="category__item-link">
+                                    <a href="ACER.html" class="category__item-link">
                                     <img src="assets/img/logoacer.jpg" alt="" class="category__item-icon" style="width: 24px;">
                                     ACER
                                     </a>
@@ -303,9 +283,9 @@
                                                 <strong class="product-price">
                                                     <span class="price-current">18.590.000₫ </span>
                                                     <span class="price-and-discount">
-                                                        <label class="price-old black">
-                                                            19.900.000₫
-                                                        </label>
+                                                            <label class="price-old black">
+                                                                19.900.000₫
+                                                            </label>
                                                             <small class="price-present">-14%</small>
                                                             <button class="add-to-cart">
                                                                 <i class="fa-solid fa-cart-shopping"></i>
@@ -529,7 +509,7 @@
                             </div>
                         </article>
                         <div class="Sale">
-                            <span class="Sale-suggest">Gợi ý hôm nay</span>
+                   
                         </div>
                         <article class="row protech container__product gutter" >
                             <div class="product-list gutter">
@@ -564,8 +544,20 @@
                                                 </div>
                                                 <strong class="product-price">
                                                     <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-and-discount">
+                                                        <label class="price-old black">
+                                                            17.190.000₫
+                                                        </label>
+                                                            <small class="price-present">-12%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
+                                                    </span>
                                                 </strong>
-                                                <div class="buy__now">
+                                                <div class="buy__now gutter">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -602,15 +594,21 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">13.690.000₫ </span>
+                                                    <span class="price-current">16.990.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            15.190.000₫
+                                                            17.190.000₫
                                                         </label>
-                                                            <small class="price-present">-9%</small>
+                                                            <small class="price-present">-12%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
-                                                <div class="buy__now">
+                                                <div class="buy__now gutter">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -647,9 +645,21 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">28.990.000₫ </span>
+                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-and-discount">
+                                                        <label class="price-old black">
+                                                            17.190.000₫
+                                                        </label>
+                                                            <small class="price-present">-12%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
+                                                    </span>
                                                 </strong>
-                                                <div class="buy__now">
+                                                <div class="buy__now gutter">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -686,15 +696,21 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">31.890.000₫ </span>
+                                                    <span class="price-current">16.990.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            35.890.000₫
+                                                            17.190.000₫
                                                         </label>
-                                                            <small class="price-present">-11%</small>
+                                                            <small class="price-present">-12%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
-                                                <div class="buy__now">
+                                                <div class="buy__now gutter">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -732,15 +748,21 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">270.000₫ </span>
+                                                    <span class="price-current">16.990.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            400.000₫
+                                                            17.190.000₫
                                                         </label>
-                                                            <small class="price-present">-32%</small>
+                                                            <small class="price-present">-12%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
-                                                <div class="buy__now">
+                                                <div class="buy__now gutter">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -777,15 +799,21 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">565.000₫ </span>
+                                                    <span class="price-current">16.990.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            790.000₫
+                                                            17.190.000₫
                                                         </label>
-                                                            <small class="price-present">-28%</small>
+                                                            <small class="price-present">-12%</small>
+                                                            <button class="add-to-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            <button class="add-to-cart"></button>
+                                                            <div class="notification" style="display: none;">
+                                                                1 sản phẩm đã được thêm vào giỏ hàng!
+                                                            </div>
                                                     </span>
                                                 </strong>
-                                                <div class="buy__now">
+                                                <div class="buy__now gutter">
                                                     <span> Mua ngay</span>
                                                 </div>
                                             </div>
@@ -975,8 +1003,6 @@
 <!--de sau-->
 </div>
 <script src="assets/js/main.js"></script>
-<script>
-window.location.href = window.location.origin + "./Admin/dashboard.htm";
-</script>
+
 </body>
 </html>

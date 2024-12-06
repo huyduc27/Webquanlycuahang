@@ -28,17 +28,38 @@
                     </div>
                         
                         
-                        <div class="header_search">
-                                <i class="header_search-icon fa-solid fa-magnifying-glass "></i>
-                                <input type="text" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm ">
-                                <button type="button" class="header_search-button"> Tìm kiếm </button> 
-                        </div>
+                    <div class="header_search">
+                        <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="header_search-input" 
+                            placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                        >
+                        
+                        <button 
+                            type="button" 
+                            class="header_search-button" 
+                            onclick="handleSearch()"
+                        >
+                            Tìm kiếm
+                        </button>
+                        
+
+                    </div>
                         <nav>
                             <ul>
-                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                                <li><a href="indexlogin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
                                 <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
                                 <li><a href="#">Tra cứu đơn hàng</a></li>
-                                <li><a href="login.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
+                                <div class="account-menu">
+                                    <div class="account-icon"><i class="fa-solid fa-user"></i>Thanh</div>
+                                    <div class="dropdown-menu">
+                                      <p style="padding-top: 5px; text-align: center; font-weight: bold;">Thanh</p>
+                                      <a href="order_history.html"> <button>Lịch sử mua hàng</button></a>
+                                      <a href="index.html"><button>Đăng xuất</button></a>
+                                    </div>
+                                  </div>
                                 <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
                             </ul>
                         </nav>
@@ -145,31 +166,31 @@
                             <span class="header__category">Danh mục</span>
                             <ul class="category__list">
                                 <li class="category__item">
-                                    <a href="HP.html" class="category__item-link">
+                                    <a href="HPlogin.html" class="category__item-link">
                                         <img src="assets/img/logoHP.png" alt="" class="category__item-icon" style="width: 24px;">
                                         HP
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="DELL.html" class="category__item-link">
+                                    <a href="DELLlogin.html" class="category__item-link">
                                         <img src="assets/img/logoDELL.png" alt="" class="category__item-icon" style="width: 24px;">
                                         DELL
                                     </a>
                                </li>
                                 <li class="category__item">
-                                    <a href="ASUS.html" class="category__item-link">
+                                    <a href="ASUSlogin.html" class="category__item-link">
                                     <img src="assets/img/logoAsus.png" alt="" class="category__item-icon" style="width: 24px;">
                                         ASUS
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="ACER.html" class="category__item-link">
+                                    <a href="ACERlogin.html" class="category__item-link">
                                     <img src="assets/img/logoacer.jpg" alt="" class="category__item-icon" style="width: 24px;">
                                     ACER
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="MSI.html" class="category__item-link">
+                                    <a href="MSIlogin.html" class="category__item-link">
                                     <img src="assets/img/MSIlogo.png" alt="" class="category__item-icon" style="width: 24px;">
                                     MSI
                                     </a>
@@ -185,7 +206,7 @@
                             </div>
                             <div class="product-list">
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="./Template/chi-tiet-sp/dien-thoai/ip15.htm" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -237,7 +258,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -288,7 +309,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -339,7 +360,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -390,7 +411,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -441,7 +462,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -499,7 +520,7 @@
                         <article class="row protech container__product gutter" >
                             <div class="product-list gutter">
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -550,7 +571,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -601,7 +622,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -652,7 +673,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -703,7 +724,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -754,7 +775,7 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
@@ -986,7 +1007,26 @@
 <div class="modal">
 <!--de sau-->
 </div>
-<script src="./main.js"></script>
+<script >
+    function handleSearch() {
+    // Lấy giá trị tìm kiếm từ input
+    const searchQuery = document.getElementById('searchInput').value.trim();
+
+    // Kiểm tra xem người dùng có nhập từ khóa không
+    if (searchQuery) {
+        // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
+        window.location.href = `foundlogin.html`;
+    } else {
+        alert('Vui lòng nhập từ khóa để tìm kiếm!');
+    }
+} 
+const cartButtons = document.querySelectorAll(".add-to-cart");
+cartButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            alert("Sản phẩm đã được thêm vào giỏ hàng!");
+          });
+        });
+</script>
 
 </body>
 </html>

@@ -28,17 +28,38 @@
                     </div>
                         
                         
-                        <div class="header_search">
-                                <i class="header_search-icon fa-solid fa-magnifying-glass "></i>
-                                <input type="text" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm ">
-                                <button type="button" class="header_search-button"> Tìm kiếm </button> 
-                        </div>
+                    <div class="header_search">
+                        <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="header_search-input" 
+                            placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                        >
+                        
+                        <button 
+                            type="button" 
+                            class="header_search-button" 
+                            onclick="handleSearch()"
+                        >
+                            Tìm kiếm
+                        </button>
+                        
+
+                    </div>
                         <nav>
                             <ul>
-                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                                <li><a href="indexlogin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
                                 <li><a href="#"><i class="fa-solid fa-location-dot"></i> Hệ thống Showroom</a></li>
                                 <li><a href="#">Tra cứu đơn hàng</a></li>
-                                <li><a href="login.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
+                                <div class="account-menu">
+                                    <div class="account-icon"><i class="fa-solid fa-user"></i>Thanh</div>
+                                    <div class="dropdown-menu">
+                                      <p style="padding-top: 5px; text-align: center; font-weight: bold;">Thanh</p>
+                                      <a href="order_history.html"> <button>Lịch sử mua hàng</button></a>
+                                      <a href="index.html"><button>Đăng xuất</button></a>
+                                    </div>
+                                  </div>
                                 <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
                             </ul>
                         </nav>
@@ -134,7 +155,6 @@
 
          <nav class="main-nav">
              <ul>
-
               </ul>
          </nav>
          <section class="container">
@@ -145,31 +165,31 @@
                             <span class="header__category">Danh mục</span>
                             <ul class="category__list">
                                 <li class="category__item">
-                                    <a href="HP.html" class="category__item-link">
+                                    <a href="HPlogin.html" class="category__item-link">
                                         <img src="assets/img/logoHP.png" alt="" class="category__item-icon" style="width: 24px;">
                                         HP
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="DELL.html" class="category__item-link">
+                                    <a href="DELLlogin.html" class="category__item-link">
                                         <img src="assets/img/logoDELL.png" alt="" class="category__item-icon" style="width: 24px;">
                                         DELL
                                     </a>
                                </li>
                                 <li class="category__item">
-                                    <a href="ASUS.html" class="category__item-link">
+                                    <a href="ASUSlogin.html" class="category__item-link">
                                     <img src="assets/img/logoAsus.png" alt="" class="category__item-icon" style="width: 24px;">
                                         ASUS
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="ACER.html" class="category__item-link">
+                                    <a href="ACERlogin.html" class="category__item-link">
                                     <img src="assets/img/logoacer.jpg" alt="" class="category__item-icon" style="width: 24px;">
                                     ACER
                                     </a>
                                 </li>
                                 <li class="category__item">
-                                    <a href="MSI.html" class="category__item-link">
+                                    <a href="MSIlogin.html" class="category__item-link">
                                     <img src="assets/img/MSIlogo.png" alt="" class="category__item-icon" style="width: 24px;">
                                     MSI
                                     </a>
@@ -185,17 +205,17 @@
                             </div>
                             <div class="product-list">
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="./Template/chi-tiet-sp/dien-thoai/ip15.htm" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/IxwHtyzsvlGyfhq7PWsMCRBr-T1EXRiZChhSxWg1d5uuDcq_MEAZvnkiOzzwDA48ZuA223O2c5eO6ZjR445rJ4e6PPRfNP9T=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/_CLGD_4PD5jF9c_OONKj5xW5xlxk-F40DXxujc2-Sg1ourUQWQUJgG5jBRsZW--UbMsowiIq4uvG0Od5twx0rDaR0BdiTwTR=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3> Laptop ACER Predator Helios Neo 16 PHN16-71-53M7 (i5-13500HX/RAM 16GB/GeForce RTX 4060/512GB SSD/ Windows 11)
+                                                        <h3> Laptop ASUS TUF Gaming A15 FA506NFR-HN006W (Ryzen 7 7435HS/ RAM 16GB/ GeForce RTX™ 2050/ 512GB SSD/ Windows 11)
                                                         </h3>
                                                     </div>
                                                     <div class="item-name-deal">
@@ -237,17 +257,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/_PpBFbnEW-yjBVcpNsmRlJv-UG-dsfQHdW9IWQRrO7I6CrXnG8Ms6NqfEigikGd9qQ5qadUBHrvqB5CWHdMcKRd_RvGoLXTP=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/-dUp_gFaq-6sZMBkCN3VfmW5sURuM4J4W8XjQ-lg_oGWvZcHd3KuLyDIIVUz2uQPtoy-gumEXn8CR0AIUL890eJRIK3kbnsD2Q=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop ACER Aspire 7 A715-76-53PJ (NH.QGESV.007) (i5-12450H/ RAM 16GB/ Onboard graphics/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS Vivobook 15X OLED M3504YA-L1332W (Ryzen 7 7730U/RAM 16GB/Onboard/512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -288,17 +308,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/9E5ZVcLJuSZ2QYLNOYAlotuDu0yW0D_ioxikzf6XdPV00i5baMVi14TOTmx9dXCyGsUk9XVtduZ3_u6obIFTnAEm4ri2fQ5G=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/UU7vk-60Cp12hKfmYqHk9CI2aCjbYBz-dMw0WOQK8oqixhc6_kBIJnIUwOZ9YQHwKm2Mp8epx2fd-AAXNx0VbRz6AzlocI4=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop ACER Nitro V 16 ProPanel ANV16-41-R7EN (Ryzen 7 8845HS/RAM 16GB/GeForce RTX 3050/512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS ExpertBook B1 B1402CBA-EB4202W (i5-1235U/ RAM 16GB/ Onboard graphics/ 512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -339,17 +359,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/2lllK6A980R5OCeo0lYBO-J1KnuXmrjrg1oCnPgwK0xuoCkphn7AlhjWP7LE3d7Drl4jPTzNJp4xS-SR2RTb1qQfMmfqnA9ftQ=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/KXDSxP3guCJOMJ2_hft8bgfhbKO1B1Zh1ONKODMyEcT9DNzR9RvNX-6q8g46DDttGDe0TBmgpzvr4bV4KbI96Vc17E0T63Q=w1000-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop Acer Swift Go SFG14-41-R5JK (AMD Ryzen 5 7530U) (Bạc)</h3>
+                                                        <h3>Laptop AI ASUS Zenbook S 13 OLED UX5304MA-NQ117W (Ultra 7-155U/RAM 32GB/Onboard/1TB SSD/Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -390,17 +410,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/g-rGqgKd1nh5VNGiiBjF0ygoGp8cG6bPCkK_ehiHtRXW3R3KS_NJ2zHJkOFXsTrGm3tM9prMOkfXSUVzCISdPqPSyQ26rLV-=w1000-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/uMAsI7NQrrzhplHRXd87NHLVBWis65Ewb0B9p63pwDvXj0Wr_gQEYRy6Hw2OT9QeuFnFMAXxvvj5qMS9LyUeClI2dI86ozzG=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop ACER Nitro 16 Phoenix AN16-41-R5M4 (Ryzen 5 7535HS/ RAM 8GB/ GeForce RTX™ 4050/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS ROG Strix G16 G614JIR-N4046W (i9-14900HX/ RAM 32GB/ GeForce RTX™ 4070/ 1TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -441,17 +461,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/clI6qtxMBQrHPv8CpJrpaQtLtQlVCpQK-5IkL_bUdaAGjz5s-LAAHhDEUiMM8M3d7u-4XHbu-q4QKivZhxRDv3aVzTm8VABs=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/ovum_JrOHDySFV7glw6TG9gWpFTjTEne5pRgqNMVEFXZbm84j9lMWU2edMEocgBVRxNfet4U3pgEiizvkzJ-D1W6iY7zC9PARw=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop ACER Nitro V 15 ProPanel ANV15-51-73UU (i7-13620H/ RAM 16GB/ GeForce RTX™ 3050/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop AI ASUS Zenbook 14 OLED UX3405MA-PP151W (Ultra 5-125H/RAM 16GB/Onboard/512GB SSD/Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -499,17 +519,17 @@
                         <article class="row protech container__product gutter" >
                             <div class="product-list gutter">
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/hr_AzE8adW18xy4NzY9BoExsYPfhHqWKvrxwdI8mHTW4-ZgmIodyZsffhyfUDWKSTlfdyGLXDQiDfAsqNU35WIGZPBFVErPi=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/1RciKvL0xMAhghfgml9zjzxM2pmuqapOwpLqq7XvmxG9sxdUgDzKrfu0c6uens5ACesnNZ3ZXRnuJcme2KzKNTiYlaudfr09ig=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop gaming ACER Nitro 5 AN515-58-5193 (i5-12450H/RAM 16GB/GeForce RTX 4050/512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS TUF Gaming A14 2024 (Ryzen AI 9 HX 370/ RAM 16GB/ GeForce RTX 4060/ 1TB SSD/ Windows 11 + Office)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -528,12 +548,12 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">250.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            450.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
+                                                            <small class="price-present">-44%</small>
                                                             <button class="add-to-cart">
                                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                             <button class="add-to-cart"></button>
@@ -550,17 +570,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/2lllK6A980R5OCeo0lYBO-J1KnuXmrjrg1oCnPgwK0xuoCkphn7AlhjWP7LE3d7Drl4jPTzNJp4xS-SR2RTb1qQfMmfqnA9ftQ=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/V3xe5LjdXi6qNlu5igfhfzkVrF0Unj-Ba4cr9u7e3jaHxEpHDJn-W1efsjYLhcO0SMEhx2dK1O9xZUaSgjWKBjekC_xXGfMcFw=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop Acer Swift Go SFG14-41-R5JK (AMD Ryzen 5 7530U) (Bạc)</h3>
+                                                        <h3>Laptop ASUS Vivobook 15 X1504ZA-NJ517W (i5-1235U/ RAM 16GB/ Onboard graphics/ 512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -579,12 +599,12 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">250.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            450.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
+                                                            <small class="price-present">-44%</small>
                                                             <button class="add-to-cart">
                                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                             <button class="add-to-cart"></button>
@@ -601,17 +621,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/dKfevbx0XfqdVY_wD3GkhP6dE6q9TRQTLn_wOf-wu9eogfahFBQqHRYPJ4l1vyxYVDg4sdYqXMkdb85YUTaEWEoPA_cdch0=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/PvhoG0yOZ-r3QX2ZemcH5qHdp_LhI1yKhQSuIvoNF2-5sL9D0tdHhBQubuwtVmTqY-SJBkjIS-5nUEhj7ejHacFwWu9eZ4vK=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop ACER Swift X 14 AI OLED SFX14-72G-77F9 (Ultra 7-155H/ RAM 32GB/ GeForce RTX™ 4050/ 1TB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS VivoBook Pro M3401QA-KM006W (Ryzen 5 5600H/ RAM 8GB/ Onboard graphics/ 512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -630,12 +650,12 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">250.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            450.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
+                                                            <small class="price-present">-44%</small>
                                                             <button class="add-to-cart">
                                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                             <button class="add-to-cart"></button>
@@ -652,17 +672,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/BJLBT19ELkU8PSYZ_lc2VUM1YG_BheTIW5lEDSGnYhlmLDQyj8iX7jSNxvPGbTIl5qRKu6SxBYASbSSQzFKMw9g_pN35cWc=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/P43A_XpxaFu2YxydQUYR8VUdtUdCOh4xrAkVtDmKMw-pWsAoSqmInDK1amyemzvXg3_70uLqcJglmFtRH_i7dON6cF8ug9xjDQ=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop ACER Predator Helios Neo PHN16-72-78DQ (i7-14650HX/ RAM 16GB/ GeForce RTX™ 4060/ 1TB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS ROG Strix G16 G614JV-N4156W (i7-13650HX/ RAM 16GB/ GeForce RTX™ 4060/ 512GB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -681,12 +701,12 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">250.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            450.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
+                                                            <small class="price-present">-44%</small>
                                                             <button class="add-to-cart">
                                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                             <button class="add-to-cart"></button>
@@ -703,17 +723,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/wdBF88SQM5ZPnU2Zp80micJZ72yJxF-ZcGnYsoj2aMPLf5E3wcJXgFLwjm3PWJAVFoiOIfwrpWJQ7oPURbjP2UQLgcvPLFOr=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/fWtZxFiLRzjcf_RgqyKi5dAvJh5RibYJQMMPPrg5PLbcBS76P74v5mX5NbDRF_ldUBg_hFV4YpkrCawkGXIvUXIf8OpN59o=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop ACER Nitro 5 Tiger AN515-58-773Y (i7-12700H/RAM 8GB/GeForce RTX 3050Ti/512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS Vivobook S 15 OLED S5507QA-MA090WS (Snapdragon® X Elite/ RAM 32GB/ Onboard/ 1TB SSD/ Windows 11 + Office)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -732,12 +752,12 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">250.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            450.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
+                                                            <small class="price-present">-44%</small>
                                                             <button class="add-to-cart">
                                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                             <button class="add-to-cart"></button>
@@ -754,17 +774,17 @@
                                     </a>
                                 </div>
                                 <div class="col l-2 m-3 c-6 product-item">
-                                    <a href="chitietsanpham.html" class="product-item-link">
+                                    <a href="#" class="product-item-link">
                                         <div class="product-item-group">
                                             <div class="product-item__mark-favourite">
                                             </div>
                                             <div class="product-item-img"
-                                                style="background-image: url(https://lh3.googleusercontent.com/MpGh4tDnZXsIixEkd6wQ8XObMyk6eEhW3EJ9f5Ix0gJVvOWkSn7nWyGlYgssZKawSS9lTMD6COVTpY8j6vXp0qTeP7GdYKQ=w500-rw);">
+                                                style="background-image: url(https://lh3.googleusercontent.com/NmjytLRK46Vm493VueRzVHBnVk0foaIdgvYR8x1vDTlacCs3VembYy68H8qiCgobf71ifKyDi1_ZGkW21qvT5QY_ALk0rOGJ=w500-rw);">
                                             </div>
                                             <div class="product-item-info">
                                                 <div class="product-item-name">
                                                     <div class="item-name__group">
-                                                        <h3>Laptop ACER Aspire 5 A515-58M-56YX (i5-13420H/ RAM 16GB/ Onboard graphics/ 512GB SSD/ Windows 11)</h3>
+                                                        <h3>Laptop ASUS Vivobook S 14 M5406WA-PP071WS (Ryzen AI 9 HX 370/ RAM 32GB/ Onboard graphics/ 1TB SSD/ Windows 11)</h3>
                                                     </div>
                                                     <div class="item-name-deal">
                                                         <!-- <span class="name-main-deal-type">Mua Kèm Deal Sốc</span>
@@ -783,12 +803,12 @@
                                                     </div>
                                                 </div>
                                                 <strong class="product-price">
-                                                    <span class="price-current">16.990.000₫ </span>
+                                                    <span class="price-current">250.000₫ </span>
                                                     <span class="price-and-discount">
                                                         <label class="price-old black">
-                                                            17.190.000₫
+                                                            450.000₫
                                                         </label>
-                                                            <small class="price-present">-12%</small>
+                                                            <small class="price-present">-44%</small>
                                                             <button class="add-to-cart">
                                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                             <button class="add-to-cart"></button>
@@ -986,7 +1006,26 @@
 <div class="modal">
 <!--de sau-->
 </div>
-<script src="./main.js"></script>
+<script >
+    function handleSearch() {
+    // Lấy giá trị tìm kiếm từ input
+    const searchQuery = document.getElementById('searchInput').value.trim();
+
+    // Kiểm tra xem người dùng có nhập từ khóa không
+    if (searchQuery) {
+        // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
+        window.location.href = `foundlogin.html`;
+    } else {
+        alert('Vui lòng nhập từ khóa để tìm kiếm!');
+    }
+}
+const cartButtons = document.querySelectorAll(".add-to-cart");
+cartButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            alert("Sản phẩm đã được thêm vào giỏ hàng!");
+          });
+        });
+</script>
 
 </body>
 </html>

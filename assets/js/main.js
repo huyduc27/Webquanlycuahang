@@ -1,16 +1,4 @@
-function checkLogin() {
-    // Giả sử trạng thái đăng nhập được lưu trong localStorage
-    const isLoggedIn = localStorage.getItem('loggedIn');
-
-    if (isLoggedIn) {
-        // Nếu đã đăng nhập, chuyển hướng đến giỏ hàng
-        window.location.href = 'cart.html';
-    } else {
-        // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập`
-        alert('Vui lòng đăng nhập trước khi vào giỏ hàng.');
-        window.location.href = 'login.html';
-    }
-}   
+  
 
         document.addEventListener("DOMContentLoaded", () => {
             const cartItems = document.querySelector(".cart-items");
@@ -66,24 +54,34 @@ function checkLogin() {
             updateTotal();
         
         });
-        // Open Search Advanced
-        document.querySelector(".filter-btn").addEventListener("click",(e) => {
-            e.preventDefault();
-            document.querySelector(".advanced-search").classList.toggle("open");
-            document.getElementById("home-service").scrollIntoView();
-        })
-        
-        document.querySelector(".form-search-input").addEventListener("click",(e) => {
-            e.preventDefault();
-            document.getElementById("home-service").scrollIntoView();
-        })
-        
-        function closeSearchAdvanced() {
-            document.querySelector(".advanced-search").classList.toggle("open");
-        }
 
-        
 
+ //Hàm xử lý tìm kiếm
+function handleSearch() {
+    // Lấy giá trị tìm kiếm từ input
+    const searchQuery = document.getElementById('searchInput').value.trim();
+
+    // Kiểm tra xem người dùng có nhập từ khóa không
+    if (searchQuery) {
+        // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
+        window.location.href = `foundresult.html`;
+    } else {
+        alert('Vui lòng nhập từ khóa để tìm kiếm!');
+    }
+}       
+
+document.getElementById("cartLink").addEventListener("click", function (event) {
+    const username = localStorage.getItem("username"); // Lấy thông tin đăng nhập từ localStorage
+  
+    if (!username) {
+      // Nếu chưa đăng nhập, ngăn truy cập và yêu cầu đăng nhập
+      event.preventDefault();
+      alert("Vui lòng đăng nhập trước khi vào Giỏ hàng!");
+      window.location.href = "login.html"; // Chuyển đến trang đăng nhập
+    } else {
+      alert(`Chào mừng ${username}, bạn có thể truy cập Giỏ hàng!`);
+    }
+  });
 
         //Open Search Mobile 
         function openSearchMb() {
@@ -97,3 +95,11 @@ function checkLogin() {
         }
 
         
+        const cartButtons = document.querySelectorAll(".add-to-cart");
+
+        // Gắn sự kiện click cho mỗi nút
+        cartButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            alert("Sản phẩm đã được thêm vào giỏ hàng!");
+          });
+        });
