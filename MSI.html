@@ -28,11 +28,25 @@
                     </div>
                         
                         
-                        <div class="header_search">
-                                <i class="header_search-icon fa-solid fa-magnifying-glass "></i>
-                                <input type="text" class="header_search-input " placeholder ="Nhập thông tin để tìm kiếm sản phẩm ">
-                                <button type="button" class="header_search-button"> Tìm kiếm </button> 
-                        </div>
+                    <div class="header_search">
+                        <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="header_search-input" 
+                            placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                        >
+                        
+                        <button 
+                            type="button" 
+                            class="header_search-button" 
+                            onclick="handleSearch()"
+                        >
+                            Tìm kiếm
+                        </button>
+                        
+
+                    </div>
                         <nav>
                             <ul>
                                 <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
@@ -849,25 +863,25 @@
                                 </a>
                             </li>
                             <li class="pagination-item pagination-item--active">
-                                <a href="#" class="pagination-number-link">1</a>
+                                <a href="MSI.html" class="pagination-number-link">1</a>
                             </li>
                             <li class="pagination-item">
-                                <a href="#" class="pagination-number-link">2</a>
+                                <a href="MSI.html" class="pagination-number-link">2</a>
                             </li>
                             <li class="pagination-item">
-                                <a href="#" class="pagination-number-link">3</a>
+                                <a href="MSI.html" class="pagination-number-link">3</a>
                             </li>
                             <li class="pagination-item">
-                                <a href="#" class="pagination-number-link">4</a>
+                                <a href="MSI.html" class="pagination-number-link">4</a>
                             </li>
                             <li class="pagination-item">
-                                <a href="#" class="pagination-number-link">5</a>
+                                <a href="MSI.html" class="pagination-number-link">5</a>
                             </li>
                             <li class="pagination-item">
-                                <a href="#" class="pagination-number-link">...</a>
+                                <a href="MSI.html" class="pagination-number-link">...</a>
                             </li>
                             <li class="pagination-item">
-                                <a href="#" class="pagination-number-link">10</a>
+                                <a href="MSI.html" class="pagination-number-link">10</a>
                             </li>
                             <li class="pagination-item">
                                 <a href="#" class="pagination-number-link">
@@ -1022,7 +1036,7 @@
 <div class="modal">
 <!--de sau-->
 </div>
-<script src="./main.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>

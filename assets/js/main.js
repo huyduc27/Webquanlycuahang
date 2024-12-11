@@ -103,3 +103,21 @@ document.getElementById("cartLink").addEventListener("click", function (event) {
             alert("Sản phẩm đã được thêm vào giỏ hàng!");
           });
         });
+        
+        document.getElementById("search-button").addEventListener("click", function () {
+            // Lấy danh sách các ô checkbox đã được chọn
+            const selectedBrands = Array.from(document.querySelectorAll('.category__list:checked')).map(input => input.value);
+            const selectedPrices = Array.from(document.querySelectorAll('.category__item:checked')).map(input => input.value);
+        
+            // Tạo URL với các tham số
+            const url = new URL("foundresult"); // Đường dẫn tới trang kết quả
+            if (selectedBrands.length > 0) {
+                url.searchParams.append("brands", selectedBrands.join(",")); // Gửi danh sách hãng
+            }
+            if (selectedPrices.length > 0) {
+                url.searchParams.append("prices", selectedPrices.join(",")); // Gửi danh sách giá
+            }
+        
+            // Chuyển hướng tới trang foundresult
+            window.location.href = url;
+        });

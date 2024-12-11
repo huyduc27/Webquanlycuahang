@@ -53,9 +53,22 @@
                     </div>
                     <div class="header_search">
                         <i class="header_search-icon fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="searchInput" class="header_search-input" placeholder="Nhập thông tin để tìm kiếm sản phẩm" oninput="searchProducts()">
-                        <button type="button" class="header_search-button">Tìm kiếm</button>
-                        <button class="filter-btn"><i class="fa-light fa-filter-list"></i><span>Lọc</span></button>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="header_search-input" 
+                            placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
+                        >
+                        
+                        <button 
+                            type="button" 
+                            class="header_search-button" 
+                            onclick="handleSearch()"
+                        >
+                            Tìm kiếm
+                        </button>
+                        
+
                     </div>
                     <nav>
                         <ul>
@@ -151,11 +164,7 @@
                 <p><strong>Đánh giá:</strong> ⭐⭐⭐</p>
                 <p>Chất lượng hình ảnh tốt, nhưng có chút vấn đề về độ sáng.</p>
             </div>
-            <div class="review">
-                <h3>Khoi Kuto</h3>
-                <p><strong>Đánh giá:</strong> ⭐</p>
-                <p>Bán hàng như con cặc</p>
-            </div>
+
         </div>
     </div>
 
