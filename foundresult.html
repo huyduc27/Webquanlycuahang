@@ -167,6 +167,7 @@
                 <div class="row">
                     <div class="col l-2 m-0 c-0">
                         <nav class="container__category">
+
                             <span class="header__category">Tìm Kiếm Nâng Cao</span>
                             <ul class="category__list">
                                 <div class="cap1">Hãng laptop:</div>
@@ -183,7 +184,8 @@
                                     <label><input type="checkbox" class="giaban" value="2">15.000.000 đ - 20.000.000 đ</label>
                                     <label><input type="checkbox" class="giaban" value="3">&gt; 25.000.000 đ</label>
                                </li>
-                               <button id="search-button" type="button" class="filter-button">Tìm Kiếm</button>
+                               <button type="submit" class="filter-button"> Tìm Kiếm</button>
+
                             </ul>
                         </nav>
                     </div>
@@ -1026,23 +1028,35 @@
           });
         });
 
-        document.getElementById("search-button").addEventListener("click", function () {
-            // Lấy danh sách các ô checkbox đã được chọn
-            const selectedBrands = Array.from(document.querySelectorAll('.theloai:checked')).map(input => input.value);
-            const selectedPrices = Array.from(document.querySelectorAll('.giaban    :checked')).map(input => input.value);
-        
-            // Tạo URL với các tham số
-            const url = new URL("foundresult"); // Đường dẫn tới trang kết quả
-            if (selectedBrands.length > 0) {
-                url.searchParams.append("brands", selectedBrands.join(",")); // Gửi danh sách hãng
-            }
-            if (selectedPrices.length > 0) {
-                url.searchParams.append("prices", selectedPrices.join(",")); // Gửi danh sách giá
-            }
-        
-            // Chuyển hướng tới trang foundresult
-            window.location.href = url;
-        });
+        // Chọn nút tìm kiếm
+    const filterButton = document.querySelector(".filter-button");
+
+// Gắn sự kiện click cho nút
+filterButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định
+
+    // Thu thập giá trị của checkbox "theloai"
+    const selectedTheloai = Array.from(document.querySelectorAll(".theloai:checked"))
+        .map(cb => cb.value);
+
+    // Thu thập giá trị của checkbox "giaban"
+    const selectedGiaban = Array.from(document.querySelectorAll(".giaban:checked"))
+        .map(cb => cb.value);
+
+    // Tạo URL với tham số
+    const baseUrl = "foundresult.html"; // Thay bằng URL trang tìm kiếm thực tế
+    const queryParams = new URLSearchParams();
+
+    if (selectedTheloai.length > 0) {
+        queryParams.append("theloai", selectedTheloai.join(","));
+    }
+    if (selectedGiaban.length > 0) {
+        queryParams.append("giaban", selectedGiaban.join(","));
+    }
+
+    // Chuyển hướng sang URL mới
+    window.location.href = `${baseUrl}?${queryParams.toString()}`;
+});
 </script>
 </body>
 </html>

@@ -1048,14 +1048,11 @@
     // Lấy giá trị tìm kiếm từ input
     const searchQuery = document.getElementById('searchInput').value.trim();
 
-    // Kiểm tra xem người dùng có nhập từ khóa không
-    if (searchQuery) {
-        // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
-        window.location.href = `foundlogin.html`;
-    } else {
-        alert('Vui lòng nhập từ khóa để tìm kiếm!');
-    }
-}
+
+     // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
+     window.location.href = `foundlogin.html`;
+
+} 
 const cartButtons = document.querySelectorAll(".add-to-cart");
 cartButtons.forEach((button) => {
           button.addEventListener("click", () => {
