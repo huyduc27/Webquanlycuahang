@@ -18,28 +18,37 @@
         }
         .product-image {
             flex: 1;
-            max-width: 400px; /* Đặt chiều rộng tối đa cho hình ảnh */
-            margin-right: 20px; /* Khoảng cách giữa hình ảnh và thông tin sản phẩm */
+            max-width: 400px;
+            margin-right: 20px;
         }
         .product-info {
-            flex: 2; /* Tăng tỷ lệ chiều rộng cho phần thông tin sản phẩm */
+            flex: 2;
         }
         .price-product {
             text-align: center;
         }
-        .current-price{
-             color: #dd2f2c;
-             font-size: 1.6rem;
-             text-align: center;
-             margin-bottom: 6px;
+        .current-price {
+            color: #dd2f2c;
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 6px;
         }
-    
-         .discount-and-price{
+        .discount-and-price {
             display: flex;
             text-align: center;
             flex-direction: column;
-            
-         }
+        }
+        .notification {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +68,6 @@
                             class="header_search-input" 
                             placeholder="Nhập thông tin để tìm kiếm sản phẩm" 
                         >
-                        
                         <button 
                             type="button" 
                             class="header_search-button" 
@@ -67,8 +75,6 @@
                         >
                             Tìm kiếm
                         </button>
-                        
-
                     </div>
                     <nav>
                         <ul>
@@ -126,12 +132,12 @@
                         <label class="price-old black">
                             35.890.000₫
                         </label>
-                            <small class="present-price">-11%</small>
+                        <small class="present-price">-11%</small>
                     </span>
                 </strong>
                 <div class="button-container">
                     <a href="#" class="buy-button">Mua ngay</a>
-                    <a href="#" class="add-to-cart-button" title="Thêm vào giỏ hàng">
+                    <a href="#" id="addToCartButton" class="add-to-cart-button" title="Thêm vào giỏ hàng">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>
@@ -139,7 +145,7 @@
         </div>
         <div class="detailed-description">
             <h2>Mô Tả Chi Tiết</h2>
-            <p>Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng. Với bộ vi xử lý Intel thế hệ 12, màn hình sắc nét 120 Hz cùng RAM 16GB tốc độ cao, sản phẩm này không chỉ đáp ứng mà còn vượt xa kỳ vọng của người dùng văn phòng, sinh viên hay cả những nhà sáng tạo nội dung.</p>
+            <p>Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
             <ul>
                 <li>Độ phân giải: 1920 x 1080</li>
                 <li>Tần số quét: 144Hz</li>
@@ -156,7 +162,7 @@
             </div>
             <div class="review">
                 <h3>Nguyễn Đức Huy</h3>
-                <p><strong>ĐánÂmh giá:</strong> ⭐⭐⭐⭐</p>
+                <p><strong>Đánh giá:</strong> ⭐⭐⭐⭐</p>
                 <p>Sản phẩm tốt, nhưng tôi mong muốn có nhiều cổng kết nối hơn.</p>
             </div>
             <div class="review">
@@ -164,9 +170,10 @@
                 <p><strong>Đánh giá:</strong> ⭐⭐⭐</p>
                 <p>Chất lượng hình ảnh tốt, nhưng có chút vấn đề về độ sáng.</p>
             </div>
-
         </div>
     </div>
+
+    <div class="notification" id="notification">Đã thêm vào giỏ hàng!</div>
 
     <footer class="end">
         <div class="row row-end">
@@ -240,18 +247,24 @@
         <!-- Để sau -->
     </div>
     
-    <script >
-         function handleSearch() {
-            // Lấy giá trị tìm kiếm từ input
+    <script>
+        function handleSearch() {
             const searchQuery = document.getElementById('searchInput').value.trim();
-        
+            window.location.href = `foundresult.html`;
+        }
 
-             // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
-             window.location.href = `foundresult.html`;
+        document.getElementById('addToCartButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định
+            showNotification();
+        });
 
-        } 
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000); // Ẩn thông báo sau 3 giây
+        }
     </script>
-   
-
 </body>
 </html>
