@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý </title>
+    <link rel="stylesheet" href="admin1.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <div class="profile">
+            <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=atpU7uoQTskQ7kNvgGzdGDD&_nc_zt=24&_nc_ht=scontent.fsgn5-2.fna&_nc_gid=AYo3J7nn5gtfedrpKKnAUF4&oh=00_AYCaLGKfiRxLX4IKPN-GSCC54TIkUcJxFo4e0Oco9P8Agw&oe=6752BBBA" alt="Admin" class="profile-img">
+            <p>Admin</p>
+            <p class="status">Online</p>
+        </div>
+        <nav class="menu">
+            <a href="admin1.html">Trang chủ</a>
+            <a href="quanlykh.html">Khách hàng</a>
+            <a href="quanlysp.html">Sản phẩm</a>
+            <a href="quanlydonhang.html">Quản lý đơn hàng</a>
+            <a href="thongkekinhdoanh.html">Thống kê kinh doanh</a>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="header">
+            <p>Tổng quan</p>
+            <div class="header-right">
+                <!-- thêm link vào******************************************** -->
+                <a href="#">Xem website</a> 
+            </div>
+        </div>
+        <!-- Dashboard cards -->
+        <div class="dashboard">
+            <div class="card color">
+                <h3>363</h3>
+                <p>Sản phẩm</p>
+                <a href="quanlysp.html">Chi tiết</a>
+            </div>
+            <div class="card color">
+                <h3>12</h3>
+                <p>Khách hàng</p>
+                <a href="quanlykh.html">Chi tiết</a>
+            </div>
+            <div class="card color">
+                <h3>5</h3>
+                <p>Quản lý đơn hàng</p>
+                <a href="quanlydonhang.html">Chi tiết</a>
+            </div>
+            <!-- Thêm các card khác theo nhu cầu -->
+        </div>
+        <!-- Biểu đồ doanh thu sản phẩm -->
+        <div class="Chart">
+            <h5>Biểu đồ thống kê top 5 khách hàng mang lại doanh thu cao nhất trong tháng</h5>
+            <canvas id="salesChart"></canvas> 
+            </div>
+                    <!-- table doanh thu sản phẩm -->
+            <h5>Bảng thống kê 5 khách hàng mang lại doanh thu cao nhất trong tháng</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="border: 2px solid black;">Khách hàng</th>
+                        <th style="border: 2px solid black;">Doanh thu mang lại</th>
+                        <th style="border: 2px solid black;">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="product-statistics" class="dashboard-chart">
+                                <p>Nguyễn Văn 1</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="category-statistics" class="dashboard-chart">
+                                <p>50.000.000</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="price-statistics" class="dashboard-chart">
+                                <p>Đã mua 50.000.000</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="product-statistics" class="dashboard-chart">
+                                <p>Nguyễn Văn 2</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="category-statistics" class="dashboard-chart">
+                                <p>30.000.000</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="price-statistics" class="dashboard-chart">
+                                <p>Đã mua 30.000.000</p>
+                            </div>
+                        </td>
+                    </tr><tr>
+                        <td>
+                            <div id="product-statistics" class="dashboard-chart">
+                                <p>Nguyễn Văn 3</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="category-statistics" class="dashboard-chart">
+                                <p>20.000.000</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="price-statistics" class="dashboard-chart">
+                                <p>Đã mua 20.000.000</p>
+                            </div>
+                        </td>
+                    </tr><tr>
+                        <td>
+                            <div id="product-statistics" class="dashboard-chart">
+                                <p>Nguyễn Văn 4</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="category-statistics" class="dashboard-chart">
+                                <p>10.000.000</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="price-statistics" class="dashboard-chart">
+                                <p>Đã mua 10.000.000</p>
+                            </div>
+                        </td>
+                    </tr><tr>
+                        <td>
+                            <div id="product-statistics" class="dashboard-chart">
+                                <p>Nguyễn Văn 5</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="category-statistics" class="dashboard-chart">
+                                <p>5.000.000</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="price-statistics" class="dashboard-chart">
+                                <p>Đã mua 5.000.000</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/admin1.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý người dùng</title>
+    <link rel="stylesheet" href="quanlykh.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <div class="profile">
+            <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=atpU7uoQTskQ7kNvgGzdGDD&_nc_zt=24&_nc_ht=scontent.fsgn5-2.fna&_nc_gid=AYo3J7nn5gtfedrpKKnAUF4&oh=00_AYCaLGKfiRxLX4IKPN-GSCC54TIkUcJxFo4e0Oco9P8Agw&oe=6752BBBA" alt="Admin" class="profile-img">
+            <p>Admin</p>
+            <p class="status">Online</p>
+        </div>
+        <nav class="menu">
+            <a href="admin1.html">Trang chủ</a>
+            <a href="quanlykh.html">Khách hàng</a>
+            <a href="quanlysp.html">Sản phẩm</a>
+            <a href="quanlydonhang.html">Quản lý đơn hàng</a>
+            <a href="thongkekinhdoanh.html">Thống kê kinh doanh</a>
+        </nav>
+    </div>
+    <div class="content">
+        <h1>Quản lý người dùng</h1> 
+        <button class="btn" id="addUserBtn">Thêm người dùng</button>
+        <!-- Thông báo thành công thêm người dùng -->
+        <div id="successMessage-ADD" class="success-message" style="display: none;">
+            <p>Thêm người dùng thành công!</p>
+        </div>
+        <!-- Thêm heading ở đây -->
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+            </tr>
+            <tr id="user1">
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>a@gmail.com</td>
+                <td id="status1">Hoạt động</td>
+                <td>
+                    <button class="btn edit-btn" onclick="editUser(1, 'Nguyễn Văn A', 'a@gmail.com', 'Hoạt động')">Sửa</button>
+                    <button class="btn lock-btn" onclick="toggleStatus(1)">Khóa</button>
+                </td>
+            </tr>
+        </table>
+                <!-- Thông báo thành công sửa người dùng -->
+        <div id="successMessage-CHANGE" class="success-message" style="display: none;">
+            <p>Thông tin người dùng đã được sửa!</p>
+        </div>
+    </div>
+        <!-- Popup thêm người dùng -->
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2>Thêm Người Dùng Mới</h2>
+            <form id="addUserForm">
+                <label for="name">Tên người dùng:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="status">Trạng thái:</label>
+                <select id="status" name="status" required>
+                    <option value="Hoạt động">Hoạt động</option>
+                    <option value="Khoá">Khoá</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Thêm người dùng</button>
+            </form>
+        </div>
+    </div>
+
+        <!-- Popup sửa người dùng -->
+    <div id="editUserForm" class="edit-form" style="display: none;">
+        <h2>Sửa thông tin người dùng</h2>
+        <label for="editName">Tên:</label>
+        <input type="text" id="editName" name="name" required><br><br>
+        <label for="editEmail">Email:</label>
+        <input type="email" id="editEmail" name="email" required><br><br>
+        <label for="editStatus">Trạng thái:</label>
+        <select id="editStatus" name="status">
+            <option value="Hoạt động">Hoạt động</option>
+            <option value="Khóa">Khóa</option>
+        </select><br><br>
+        <button class="btn" id="saveBtn">Lưu thay đổi</button>
+        <button class="btn" id="cancelBtn">Hủy</button>
+    </div>
+    <script src="js/themnguoidung.js"></script>
+    <script src="js/suanguoidung.js"></script>
+    <script src="js/khoanguoidung.js"></script>
+</div>
+</body>
+</html>

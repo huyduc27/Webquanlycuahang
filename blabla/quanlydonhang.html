@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Đơn Hàng</title>
+    <link rel="stylesheet" href="quanlydonhang.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <div class="profile">
+            <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=atpU7uoQTskQ7kNvgGzdGDD&_nc_zt=24&_nc_ht=scontent.fsgn5-2.fna&_nc_gid=AYo3J7nn5gtfedrpKKnAUF4&oh=00_AYCaLGKfiRxLX4IKPN-GSCC54TIkUcJxFo4e0Oco9P8Agw&oe=6752BBBA" alt="Admin" class="profile-img">
+            <p>Admin</p>
+            <p class="status">Online</p>
+        </div>
+        <nav class="menu">
+            <a href="admin1.html">Trang chủ</a>
+            <a href="quanlykh.html">Khách hàng</a>
+            <a href="quanlysp.html">Sản phẩm</a>
+            <a href="quanlydonhang.html">Quản lý đơn hàng</a>
+            <a href="thongkekinhdoanh.html">Thống kê kinh doanh</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="filter-container">
+            <h2>Quản Lý Đơn Hàng</h2>
+            <div class="filters">
+                <!-- Lọc theo thời gian -->
+                <div class="filter-item">
+                    <label for="start-date">Từ Ngày:</label>
+                    <input type="date" id="start-date" name="start-date">
+                </div>
+                <div class="filter-item">
+                    <label for="end-date">Đến Ngày:</label>
+                    <input type="date" id="end-date" name="end-date">
+                </div>
+        
+                <!-- Lọc theo trạng thái -->
+                <div class="filter-item">
+                    <label for="status">Trạng Thái:</label>
+                    <select id="status" name="status">
+                        <option value="">Tất Cả</option>
+                        <option value="choxuly">Chờ Xử Lý</option>
+                        <option value="danggiaohang">Đang Giao Hàng</option>
+                        <option value="dagiao">Đã Giao</option>
+                        <option value="huy">Hủy</option>
+                    </select>
+                </div>
+        
+                <!-- Lọc theo địa chỉ -->
+                <div class="filter-item">
+                    <label for="address">Địa Chỉ:</label>
+                    <select id="address" name="address">
+                        <option value="">Tất Cả</option>
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="hcm">TP. HCM</option>
+                        <option value="danang">Đà Nẵng</option>
+                    </select>
+                </div>
+        
+                <!-- Nút Lọc -->
+                <button onclick="applyFilter()">Lọc</button>
+            </div>
+        
+            <!-- Bảng Đơn Hàng -->
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>Mã Đơn Hàng</th>
+                        <th>Khách Hàng</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa Chỉ</th>
+                        <th>Ngày</th>
+                        <th>Trạng Thái</th>
+                        <th>Chi tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-date="2024-12-01" data-status="choxuly" data-address="hanoi">
+                        <td>#12345</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>0123456789</td>
+                        <td>Hà Nội</td>
+                        <td>01/12/2024</td>
+                        <td>Chờ Xử Lý</td>
+                        <td><button>Xem</button></td>
+                    </tr>
+                    <tr data-date="2024-12-02" data-status="dagiao" data-address="hcm">
+                        <td>#12346</td>
+                        <td>Nguyễn Thị B</td>
+                        <td>0123456987</td>
+                        <td>TP. HCM</td>
+                        <td>02/12/2024</td>
+                        <td>Đã Giao</td>
+                        <td><button>Xem</button></td>
+                    </tr>
+                    <tr data-date="2024-12-03" data-status="danggiaohang" data-address="danang">
+                        <td>#12347</td>
+                        <td>Trần Văn C</td>
+                        <td>9876543210</td>
+                        <td>Đà Nẵng</td>
+                        <td>03/12/2024</td>
+                        <td>Đang Giao Hàng</td>
+                        <td><button>Xem</button></td>
+                    </tr>
+                    <!-- Thêm các đơn hàng khác -->
+                </tbody>
+            </table>
+        </div>        
+    </div>
+    <script src="js/locdonhang.js"></script>
+</body>
+</html>

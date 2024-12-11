@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="quanlysp.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <div class="profile">
+            <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=atpU7uoQTskQ7kNvgGzdGDD&_nc_zt=24&_nc_ht=scontent.fsgn5-2.fna&_nc_gid=AYo3J7nn5gtfedrpKKnAUF4&oh=00_AYCaLGKfiRxLX4IKPN-GSCC54TIkUcJxFo4e0Oco9P8Agw&oe=6752BBBA" alt="Admin" class="profile-img">
+            <p>Admin</p>
+            <p class="status">Online</p>
+        </div>
+        <nav class="menu">
+            <a href="admin1.html">Trang chủ</a>
+            <a href="quanlykh.html">Khách hàng</a>
+            <a href="quanlysp.html">Sản phẩm</a>
+            <a href="quanlydonhang.html">Quản lý đơn hàng</a>
+            <a href="thongkekinhdoanh.html">Thống kê kinh doanh</a>
+        </nav>
+    </div>
+    <div class="content">
+            <h1>Danh sách sản phẩm</h1>
+            <button id="add-product-btn">Thêm sản phẩm</button>
+            <div class="product-grid">
+                <!-- Sản phẩm mẫu -->
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/BGBHU5q0aUWtGXXtrQQm6jpDBf0dnxoZ2FPt3VE_Rx_F9zT57Jct-p0EfNTr6t8_EPyJ7enaMMH2pqzA4S0Ug3eNh0qWc_Ozyw=w500-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop Dell Inspiron 3520 - 25P2312 (i5-1235U/RAM 16GB/512GB SSD/ Windows 11 + Office)</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron với cấu hình mạnh mẽ, thích hợp cho công việc văn phòng, học tập và giải trí.</p>
+                        <p id="product-price">Giá: 100,000 VND</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+
+
+        <!-- Modal thêm sản phẩm -->
+        <div id="add-product-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; border:1px solid #ccc;">
+            <h2>Thêm sản phẩm mới</h2>
+            <form id="add-product-form">
+                <label for="product-name">Tên sản phẩm:</label>
+                <input type="text" id="product-name" required>
+                <br>
+                <label for="product-price">Giá sản phẩm:</label>
+                <input type="number" id="product-price" required>
+                <br>
+                <label for="product-image">Hình ảnh:</label>
+                <input type="file" id="product-image" accept="image/*" required>
+                <img id="preview-image" style="width: 150px; display:none; margin-top:10px;">
+                <br>
+                <button type="submit">Thêm sản phẩm</button>
+                <button type="button" id="cancel-add-product">Hủy</button>
+            </form>
+        </div>
+        <!-- Modal sửa sản phẩm -->
+        <div id="edit-product-modal" class="modal">
+            <div class="modal-content">
+                <h2>Sửa Sản Phẩm</h2>
+                <label for="edit-product-name">Tên sản phẩm:</label>
+                <input type="text" id="edit-product-name" value="Laptop Dell Inspiron 3520 - 25P2312 (i5-1235U/RAM 16GB/512GB SSD/ Windows 11 + Office)">
+                
+                <label for="edit-product-description">Mô tả sản phẩm:</label>
+                <textarea id="edit-product-description">Laptop Dell Inspiron với cấu hình mạnh mẽ, thích hợp cho công việc văn phòng, học tập và giải trí.</textarea>
+                
+                <label for="edit-product-price">Giá sản phẩm:</label>
+                <input type="text" id="edit-product-price" value="100,000 VND">
+                
+                <label for="edit-product-image">Hình ảnh sản phẩm:</label>
+                <input type="file" id="edit-product-image">
+                <button type="button" id="remove-image-btn" onclick="removeImage()">Bỏ hình ảnh</button>
+                
+                <button type="button" onclick="saveProduct()">Lưu</button>
+                <button type="button" onclick="closeModal()">Hủy</button>
+            </div>
+        </div>
+        <!-- Modal Xác Nhận Xóa -->
+        <div id="confirm-delete-modal" class="modal">
+            <div class="modal-content">
+                <h2>Xác nhận xóa sản phẩm</h2>
+                <p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+                <button type="button" onclick="deleteProduct()">Có, xóa</button>
+                <button type="button" onclick="closeDeleteModal()">Hủy</button>
+            </div>
+        </div>
+        </div>
+        <div class="pagination">
+            <a href="quanlysp.html" class="page-btn">1</a>
+            <a href="quanlysp.html" class="page-btn">2</a>
+            <a href="quanlysp.html" class="page-btn">3</a>
+            <a href="quanlysp.html" class="page-btn">></a>
+          </div>
+                        
+    </div>
+
+    <script src="js/themsp.js"></script>
+    <script src="js/suasp.js"></script>
+    <script src="js/xoasp.js"></script>
+</body>
+

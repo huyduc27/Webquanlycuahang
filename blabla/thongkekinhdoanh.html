@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê kinh doanh admin</title>
+    <link rel="stylesheet" href="thongkekinhdoanh.css">
+</head>
+<body>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Admin</h2>
+            <div class="profile">
+                <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=atpU7uoQTskQ7kNvgGzdGDD&_nc_zt=24&_nc_ht=scontent.fsgn5-2.fna&_nc_gid=AYo3J7nn5gtfedrpKKnAUF4&oh=00_AYCaLGKfiRxLX4IKPN-GSCC54TIkUcJxFo4e0Oco9P8Agw&oe=6752BBBA" alt="Admin" class="profile-img">
+                <p>Admin</p>
+                <p class="status">Online</p>
+            </div>
+            <nav class="menu">
+                <a href="admin1.html">Trang chủ</a>
+                <a href="quanlykh.html">Khách hàng</a>
+                <a href="quanlysp.html">Sản phẩm</a>
+                <a href="quanlydonhang.html">Quản lý đơn hàng</a>
+                <a href="thongkekinhdoanh.html">Thống kê kinh doanh</a>
+            </nav>
+        </div>
+        <!-- Main content -->
+        <div class="content">
+            <!-- Biểu đồ doanh thu sản phẩm -->
+            <div class="Chart">
+                <h5>Biểu đồ cột - Doanh thu các sản phẩm</h2>
+                <canvas id="salesChart"></canvas> 
+                </div>
+                        <!-- table doanh thu sản phẩm -->
+                <h5>Bảng thống kê Laptop bán chạy trong năm</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="border: 2px solid black;">Mặt hàng</th>
+                            <th style="border: 2px solid black;">Số lượng bán</th>
+                            <th style="border: 2px solid black;">Giá </th>
+                            <th style="border: 2px solid black;">Doanh thu sản phẩm(VNĐ)</th>
+                            <th style="border: 2px solid black;">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="product-statistics" class="dashboard-chart">
+                                    <p>Laptop gaming HP Victus 16</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="category-statistics" class="dashboard-chart">
+                                    <p>2100</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="price-statistics" class="dashboard-chart">
+                                    <p>2.100.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>315.000.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>Đã bán 2100 cái</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="product-statistics" class="dashboard-chart">
+                                    <p>Laptop ASUS Zenbook S 14</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="category-statistics" class="dashboard-chart">
+                                    <p>1020</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="price-statistics" class="dashboard-chart">
+                                    <p>2.000.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>400.000.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>Đã bán 1020 cái</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="product-statistics" class="dashboard-chart">
+                                    <p>Laptop ASUS TUF Gaming F15</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="category-statistics" class="dashboard-chart">
+                                    <p>900</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="price-statistics" class="dashboard-chart">
+                                    <p>1.400.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>180.000.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>Đã bán 900 cái</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="product-statistics" class="dashboard-chart">
+                                    <p>Laptop MSI Prestige 14</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="category-statistics" class="dashboard-chart">
+                                    <p>400</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="price-statistics" class="dashboard-chart">
+                                    <p>1.200.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>308.000.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>Đã bán 400 cái</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="product-statistics" class="dashboard-chart">
+                                    <p>Laptop MSI Modern 14</p><a href="danhsachdonhang.html">(Xem đơn hàng)</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="category-statistics" class="dashboard-chart">
+                                    <p>136</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="price-statistics" class="dashboard-chart">
+                                    <p>1.000.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>204.000.000</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="revenue-statistics" class="dashboard-chart">
+                                    <p>Đã bán 136 cái</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            <div class="mt-3">
+                <p><b>Tổng thu:</b> <span id="totalRevenue">1.407.000.000 VNĐ</span></p>
+                <p><b>Hàng bán chạy nhất:</b> <span id="bestSelling">Laptop gaming HP Victus 16</span></p>
+                <p><b>Hàng ế nhất:</b> <span id="leastSelling">Laptop Dell Vostro 3520</span></p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/chartdoanhthuSANPHAM.js"></script>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #0c351f;
+    color: white;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.status {
+    color: #4CAF50;
+    font-size: 14px;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* Main content */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+/* CSS cho heading */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* CSS cho table */
+table {
+    width: 220%;
+    border-collapse: separate;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* CSS cho các nút */
+.btn {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Modal (popup) */
+.modal {
+    display: none; /* Ẩn modal theo mặc định */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Màu nền tối */
+}
+
+/* Nội dung modal */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Nút đóng */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Thông báo thành công */
+.success-message {
+    background-color: #28a745;  /* Màu xanh lá cây đậm */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+    position: relative;
+    opacity: 0;
+    animation: slideIn 0.5s ease-out forwards, fadeOut 3s 2.5s forwards; /* Hiệu ứng xuất hiện và ẩn */
+}
+
+/* Hiệu ứng slide-in (chạy từ dưới lên) */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hiệu ứng fade-out (mờ dần) */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Thêm một biểu tượng vào thông báo thành công */
+.success-message:before {
+    content: "✔️";  /* Biểu tượng dấu tick */
+    font-size: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Nút Sửa */
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Nút Khoá */
+.lock-btn {
+    background-color: #ff0019;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lock-btn:hover {
+    background-color: #c82333;
+}
+
+/* CSS cho form sửa người dùng */
+.edit-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.edit-form input, .edit-form select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.edit-form button {
+    width: 48%;
+}
+
+.lock-btn {
+    background-color: #ff0000; /* Màu cam */
+    color: white;
+}
+
+.lock-btn:active {
+    background-color: #4CAF50; /* Màu đỏ khi bấm */
+}
