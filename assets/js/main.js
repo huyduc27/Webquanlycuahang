@@ -62,12 +62,9 @@ function handleSearch() {
     const searchQuery = document.getElementById('searchInput').value.trim();
 
     // Kiểm tra xem người dùng có nhập từ khóa không
-    if (searchQuery) {
         // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
         window.location.href = `foundresult.html`;
-    } else {
-        alert('Vui lòng nhập từ khóa để tìm kiếm!');
-    }
+
 }       
 
 document.getElementById("cartLink").addEventListener("click", function (event) {

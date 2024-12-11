@@ -327,6 +327,13 @@
              </div>
             </footer>
         <script>
+             function handleSearch() {
+            // Lấy giá trị tìm kiếm từ input
+            const searchQuery = document.getElementById('searchInput').value.trim();
+        
+
+             // Chuyển hướng sang trang "kết quả tìm kiếm" và đính kèm từ khóa tìm kiếm
+             window.location.href = `foundresult.html`;} 
             document.addEventListener('DOMContentLoaded', function() {
     // Event listener for "Place Order" button
     const placeOrderBtn = document.querySelector('.place-order-btn');
