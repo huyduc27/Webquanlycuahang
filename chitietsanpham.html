@@ -45,10 +45,40 @@
             padding: 15px;
             position: fixed;
             top: 20px;
-            right: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1000;
             border-radius: 5px;
+            text-align: center;
         }
+        .thumbnail-container {
+    display: flex;
+    justify-content: center; /* Căn giữa các thumbnail */
+    margin-top: 10px;
+    flex-wrap: wrap; /* Cho phép thumbnail quấn lại */
+}
+
+.thumbnail {
+    margin: 0 10px; /* Khoảng cách giữa các thumbnail */
+    cursor: pointer;
+    display: flex; /* Để có thể căn giữa hình ảnh */
+    align-items: center; /* Căn giữa hình ảnh theo chiều dọc */
+    border: 2px solid transparent; /* Viền mặc định */
+    padding: 5px; /* Khoảng cách bên trong thumbnail */
+    border-radius: 5px; /* Bo góc cho thumbnail */
+    transition: border 0.3s, transform 0.3s; /* Chuyển tiếp mượt mà khi hover */
+}
+
+.thumbnail img {
+    width: 60px; /* Kích thước ảnh thumbnail */
+    height: auto; /* Giữ tỉ lệ khung hình */
+    border-radius: 10px;
+}
+
+.thumbnail:hover {
+    border: 2px solid #4CAF50; /* Viền nổi bật khi hover */
+    transform: scale(1.1); /* Phóng to khi hover */
+}
     </style>
 </head>
 <body>
@@ -122,27 +152,38 @@
     <div class="container">
         <div class="product-container">
             <div class="product-image">
-                <img src="assets/img/image.png" alt="Màn hình ASUS">
+                <img id="mainImage" src="assets/img/image.png" alt="Màn hình ASUS">
             </div>
             <div class="product-info">
-                <h1>Laptop Dell Inspiron 3520 - 25P2312 (i5-1235U/RAM 16GB/512GB SSD/ Windows 11 + Office)</h1>
+                <h1>Laptop Dell Inspiron 3520</h1>
                 <strong class="price-product">
                     <span class="current-price">31.890.000₫ </span>
                     <span class="discount-and-price">
-                        <label class="price-old black">
-                            35.890.000₫
-                        </label>
+                        <label class="price-old black">35.890.000₫</label>
                         <small class="present-price">-11%</small>
                     </span>
                 </strong>
                 <div class="button-container">
-                    <a href="#" class="buy-button">Mua ngay</a>
+                    <a href="cart.html" class="buy-button">Mua ngay</a>
                     <a href="#" id="addToCartButton" class="add-to-cart-button" title="Thêm vào giỏ hàng">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>
             </div>
         </div>
+        
+        <div class="thumbnail-container">
+            <div class="thumbnail" onclick="changeImage('assets/img/image.png')">
+                <img src="assets/img/image.png" alt="Thumbnail 1">
+            </div>
+            <div class="thumbnail" onclick="changeImage('assets/img/lap2.webp')">
+                <img src="assets/img/lap2.webp" alt="Thumbnail 2">
+            </div>
+            <div class="thumbnail" onclick="changeImage('assets/img/lap3.webp')">
+                <img src="assets/img/lap3.webp" alt="Thumbnail 3">
+            </div>
+        </div>
+
         <div class="detailed-description">
             <h2>Mô Tả Chi Tiết</h2>
             <p>Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
@@ -264,6 +305,11 @@
             setTimeout(() => {
                 notification.style.display = 'none';
             }, 3000); // Ẩn thông báo sau 3 giây
+        }
+
+        function changeImage(newSrc) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = newSrc;
         }
     </script>
 </body>
