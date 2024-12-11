@@ -103,7 +103,7 @@ document.getElementById("cartLink").addEventListener("click", function (event) {
             alert("Sản phẩm đã được thêm vào giỏ hàng!");
           });
         });
-        
+
         document.getElementById("search-button").addEventListener("click", function () {
             // Lấy danh sách các ô checkbox đã được chọn
             const selectedBrands = Array.from(document.querySelectorAll('.category__list:checked')).map(input => input.value);
