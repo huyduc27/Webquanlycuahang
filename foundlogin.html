@@ -66,6 +66,7 @@
                                     <div class="account-icon"><i class="fa-solid fa-user"></i>Thanh</div>
                                     <div class="dropdown-menu">
                                       <p style="padding-top: 5px; text-align: center; font-weight: bold;">Thanh</p>
+                                      <a href="chinhsua.html"> <button>Thông Tin Cá Nhân</button></a>
                                       <a href="order_history.html"> <button>Lịch sử mua hàng</button></a>
                                       <a href="index.html"><button>Đăng xuất</button></a>
                                     </div>
@@ -176,6 +177,15 @@
                         <nav class="container__category">
                             <span class="header__category">Tìm Kiếm Nâng Cao</span>
                             <ul class="category__list">
+                                <h3>Tên:</h3>
+                                <div class="filter-name">
+                                    <input
+                                      type="text"
+                                      name="name"
+                                      placeholder="Enter product name"
+                                      class="filter-input"
+                                    />
+                                  </div>
                                 <div class="cap1">Hãng laptop:</div>
                                 <li class="category__item">
                                     <label><input type="checkbox" class="theloai" value="HP">HP</label>
@@ -1056,6 +1066,7 @@ filterButton.addEventListener("click", function (event) {
     // Thu thập giá trị của checkbox "giaban"
     const selectedGiaban = Array.from(document.querySelectorAll(".giaban:checked"))
         .map(cb => cb.value);
+
 
     // Tạo URL với tham số
     const baseUrl = "foundlogin.html"; // Thay bằng URL trang tìm kiếm thực tế
