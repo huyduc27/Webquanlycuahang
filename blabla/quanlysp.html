@@ -10,7 +10,7 @@
     <div class="sidebar">
         <h2>Admin</h2>
         <div class="profile">
-            <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=atpU7uoQTskQ7kNvgGzdGDD&_nc_zt=24&_nc_ht=scontent.fsgn5-2.fna&_nc_gid=AYo3J7nn5gtfedrpKKnAUF4&oh=00_AYCaLGKfiRxLX4IKPN-GSCC54TIkUcJxFo4e0Oco9P8Agw&oe=6752BBBA" alt="Admin" class="profile-img">
+            <img src="assets/BỐN ANH TÀI.png" alt="Admin" class="profile-img">
             <p>Admin</p>
             <p class="status">Online</p>
         </div>
@@ -29,9 +29,81 @@
                 <!-- Sản phẩm mẫu -->
                     <div class="product">
                         <img id="product-image" src="https://lh3.googleusercontent.com/BGBHU5q0aUWtGXXtrQQm6jpDBf0dnxoZ2FPt3VE_Rx_F9zT57Jct-p0EfNTr6t8_EPyJ7enaMMH2pqzA4S0Ug3eNh0qWc_Ozyw=w500-rw" alt="Sản phẩm 1">
-                        <h3 id="product-name">Laptop Dell Inspiron 3520 - 25P2312 (i5-1235U/RAM 16GB/512GB SSD/ Windows 11 + Office)</h3>
-                        <p id="product-description">Mô tả: Laptop Dell Inspiron với cấu hình mạnh mẽ, thích hợp cho công việc văn phòng, học tập và giải trí.</p>
-                        <p id="product-price">Giá: 100,000 VND</p>
+                        <h3 id="product-name">Laptop Dell Inspiron 3520</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/XYISynRsDZRXHmRVIfbxGEIuMOG3l7EhUId6qdfvoUoKzVdQTUujOi-WZxYYItWyHv5lCCKDc4IHM0sgujTpu3Ax3skFwVrc=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop ACER Swift Lite 14</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/tF2bZBVeZ2dAEUVqmbdUJ9pRJOJnaa0-XVi7AzhfXej6Ah5SMzhuDnBI-ttrX7_uKkhad-O2mjG_edrEVhfE1H8B9ZBthOJr=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop Dell Inspiron 5440</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/4nCCUBSgMqOnGfEM8ODKTchccFs-p_ZyeAy1zVES1AFOhxYu-DG1LjgQ4JAL-_ClwFsv_D1cnNmbBiEymQqwTpVNeIgfmfJ_=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop MSI Stealth A16</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/B5svW_X10PrRetiNLpBkOrS3lpihaioY1vA-ccwK-FEPPugqCLJGT5DxTEogt5XGVsQ1IPRBXJdqhYMwgNJOgIKmsigoFUeKXQ=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop ASUS Zenbook</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/ttzU7zhBvazkEbcVwKqI-zdKFdE6jfPIdTBP7lS6N2TJCeEyPldXGvSgFTQHgvbqEiH0xPMmkkncsZ1p9P9rlH2etUFOC9SM=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop ASUS TUF Gaming</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/A-yvXMHYt97dyL1_9xyhjvdA6fGg1uQU1i0izHyEWXaiSE3Hno1dOFUWN6_gF_8dGcg0M67Sn0FH6ug1xD10Yow1i31tP4UQ=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop AI ACER Predator</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/KGqk74SUV07UBXjqf1H4laM6J4ctSkBLoPMiHu3FYPxs3g2Ucxka8P749TozQ9VwVzrkJ5k5voPWWSus3u-O7a3uasLOzx00=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop gaming HP Victus</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/Mhii7Qf4-sBh0llsvOAl5THfejqRwZDukFahEo-7QdZdaZEkGnWOFVzte_BmxUHsGniSIL7aVHZ7TgALDydQlMDiiB5z6I_e=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop HP ProBook</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
+                        <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
+                        <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
+                    </div>
+                    <div class="product">
+                        <img id="product-image" src="https://lh3.googleusercontent.com/Qi6XhuBkzSlpcSBVougTG9U7U27_knWMY58htvxUG4WQa92ISsgbgQaM2JhMqyLmJ_o1S_HoWUcRBMQoOfQoS-U2Rxcix5ie=w1000-rw" alt="Sản phẩm 1">
+                        <h3 id="product-name">Laptop MSI Prestige</h3>
+                        <p id="product-description">Mô tả: Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</p>
+                        <p id="product-price">Giá: 18.590.000₫</p>
                         <button class="edit-product-btn" data-id="1" onclick="editProduct()">Sửa</button>
                         <button class="delete-product-btn" onclick="confirmDeleteProduct()">Xóa</button>
                     </div>
@@ -68,7 +140,7 @@
                 <input type="text" id="edit-product-name" value="Laptop Dell Inspiron 3520 - 25P2312 (i5-1235U/RAM 16GB/512GB SSD/ Windows 11 + Office)">
                 
                 <label for="edit-product-description">Mô tả sản phẩm:</label>
-                <textarea id="edit-product-description">Laptop Dell Inspiron với cấu hình mạnh mẽ, thích hợp cho công việc văn phòng, học tập và giải trí.</textarea>
+                <textarea id="edit-product-description">Laptop Dell Inspiron 3520 mang đến sự kết hợp hoàn hảo giữa hiệu suất mạnh mẽ, thiết kế tinh tế và các công nghệ tiên tiến trên một chiếc laptop văn phòng.</textarea>
                 
                 <label for="edit-product-price">Giá sản phẩm:</label>
                 <input type="text" id="edit-product-price" value="100,000 VND">
