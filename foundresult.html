@@ -1043,7 +1043,7 @@
 // Gắn sự kiện click cho nút
 filterButton.addEventListener("click", function (event) {
     event.preventDefault(); // Ngăn chặn hành vi mặc định
-
+    const name = document.querySelector('.filter-input').value.trim();
     // Thu thập giá trị của checkbox "theloai"
     const selectedTheloai = Array.from(document.querySelectorAll(".theloai:checked"))
         .map(cb => cb.value);
@@ -1051,11 +1051,12 @@ filterButton.addEventListener("click", function (event) {
     // Thu thập giá trị của checkbox "giaban"
     const selectedGiaban = Array.from(document.querySelectorAll(".giaban:checked"))
         .map(cb => cb.value);
+        
 
     // Tạo URL với tham số
     const baseUrl = "foundresult.html"; // Thay bằng URL trang tìm kiếm thực tế
     const queryParams = new URLSearchParams();
-
+    if (name) queryParams.append('name', name);
     if (selectedTheloai.length > 0) {
         queryParams.append("theloai", selectedTheloai.join(","));
     }
